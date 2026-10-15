@@ -251,7 +251,6 @@ RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfil
     setupRemoteSection();
     setupEndpointsSection();
 
-    updateRuleSection();
     const auto *scr = screen() != nullptr ? screen() : QGuiApplication::primaryScreen();
     if (scr != nullptr) resize(sizeHint().boundedTo(scr->availableGeometry().size()));
 }
@@ -795,8 +794,11 @@ void RouteItem::ensurePlusTabBuiltOnce() {
 
 void RouteItem::removeAllAttributeTabsExceptPlus() {
     ensurePlusTabBuiltOnce();
-    while (ui->rule_attr_tabs->count() > 1)
+    while (ui->rule_attr_tabs->count() > 1) {
+        QWidget* w = ui->rule_attr_tabs->widget(0);
         ui->rule_attr_tabs->removeTab(0);
+        delete w;
+    }
 }
 
 void RouteItem::syncPlusListCheckStatesFromRule() {
@@ -887,6 +889,7 @@ bool RouteItem::eventFilter(QObject* watched, QEvent* event) {
 void RouteItem::rebuildRuleAttributeTabs() {
     ensurePlusTabBuiltOnce();
 
+    ui->rule_attr_tabs->setUpdatesEnabled(false);
     ui->rule_attr_tabs->blockSignals(true);
     removeAllAttributeTabsExceptPlus();
 
@@ -894,6 +897,7 @@ void RouteItem::rebuildRuleAttributeTabs() {
         syncPlusListCheckStatesFromRule();
         applyStoredRuleAttrTabSelection();
         ui->rule_attr_tabs->blockSignals(false);
+        ui->rule_attr_tabs->setUpdatesEnabled(true);
         return;
     }
 
@@ -910,6 +914,7 @@ void RouteItem::rebuildRuleAttributeTabs() {
     applyStoredRuleAttrTabSelection();
 
     ui->rule_attr_tabs->blockSignals(false);
+    ui->rule_attr_tabs->setUpdatesEnabled(true);
 }
 
 void RouteItem::updateRuleSection() {
