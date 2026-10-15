@@ -120,7 +120,11 @@ RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfil
 
     ui->route_name->setText(chain->name);
     ui->rule_preview->setReadOnly(true);
-    ui->rule_attr_tabs->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    ui->rule_attr_tabs->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    ui->rule_attr_tabs->setMinimumWidth(0);
+    ui->rule_attr_tabs->setUsesScrollButtons(true);
+    ui->rule_attr_tabs->tabBar()->setUsesScrollButtons(true);
+    ui->rule_attr_tabs->tabBar()->setExpanding(false);
     ui->rule_attr_tabs->setTabsClosable(true);
     connect(ui->rule_attr_tabs, &QTabWidget::tabCloseRequested, this, [this](int index) {
         if (currentIndex < 0) return;
@@ -132,11 +136,6 @@ RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfil
     connect(ui->rule_attr_tabs, &QTabWidget::currentChanged, this, [this](int index) {
         if (currentIndex >= 0 && !currentRuleIsEndpoint() && index >= 0 && index < ui->rule_attr_tabs->count())
             chain->Rules[currentIndex]->uiActiveAttributeTabLabel = ui->rule_attr_tabs->tabText(index);
-        if (QWidget* w = ui->rule_attr_tabs->currentWidget()) {
-            w->updateGeometry();
-            w->adjustSize();
-        }
-        ui->rule_attr_tabs->updateGeometry();
     });
 
     ensurePlusTabBuiltOnce();
@@ -162,10 +161,16 @@ RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfil
     ui->simple_proxy->hide();
     ui->simple_warpbypass->hide();
 
-    simpleDirect->setPlainText(chain->GetSimpleRules(Configs::bypass));
-    simpleBlock->setPlainText(chain->GetSimpleRules(Configs::block));
-    simpleProxy->setPlainText(chain->GetSimpleRules(Configs::proxy));
-    simpleWarpBypass->setPlainText(chain->GetSimpleRules(Configs::warpBypass));
+    {
+        const QSignalBlocker b1(simpleDirect);
+        const QSignalBlocker b2(simpleBlock);
+        const QSignalBlocker b3(simpleProxy);
+        const QSignalBlocker b4(simpleWarpBypass);
+        simpleDirect->setPlainText(chain->GetSimpleRules(Configs::bypass));
+        simpleBlock->setPlainText(chain->GetSimpleRules(Configs::block));
+        simpleProxy->setPlainText(chain->GetSimpleRules(Configs::proxy));
+        simpleWarpBypass->setPlainText(chain->GetSimpleRules(Configs::warpBypass));
+    }
 
     // Dispatch on page identity: literal tab indices misroute as soon as a page is inserted.
     lastTabPage = ui->tabWidget->currentWidget();
@@ -195,6 +200,10 @@ RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfil
         syncEndpointRules();
 
         if (lastTabPage == ui->tab_2) {
+            const QSignalBlocker b1(simpleDirect);
+            const QSignalBlocker b2(simpleBlock);
+            const QSignalBlocker b3(simpleProxy);
+            const QSignalBlocker b4(simpleWarpBypass);
             simpleDirect->setPlainText(chain->GetSimpleRules(Configs::bypass));
             simpleBlock->setPlainText(chain->GetSimpleRules(Configs::block));
             simpleProxy->setPlainText(chain->GetSimpleRules(Configs::proxy));
@@ -593,10 +602,16 @@ void RouteItem::reloadRuleViewsFromChain() {
     currentIndex = -1;
     ui->route_name->setText(chain->name);
     syncEndpointRules();
-    simpleDirect->setPlainText(chain->GetSimpleRules(Configs::bypass));
-    simpleBlock->setPlainText(chain->GetSimpleRules(Configs::block));
-    simpleProxy->setPlainText(chain->GetSimpleRules(Configs::proxy));
-    simpleWarpBypass->setPlainText(chain->GetSimpleRules(Configs::warpBypass));
+    {
+        const QSignalBlocker b1(simpleDirect);
+        const QSignalBlocker b2(simpleBlock);
+        const QSignalBlocker b3(simpleProxy);
+        const QSignalBlocker b4(simpleWarpBypass);
+        simpleDirect->setPlainText(chain->GetSimpleRules(Configs::bypass));
+        simpleBlock->setPlainText(chain->GetSimpleRules(Configs::block));
+        simpleProxy->setPlainText(chain->GetSimpleRules(Configs::proxy));
+        simpleWarpBypass->setPlainText(chain->GetSimpleRules(Configs::warpBypass));
+    }
     ui->def_out->setCurrentText(Configs::outboundIDToString(chain->defaultOutboundID));
 }
 
@@ -771,7 +786,10 @@ QWidget* RouteItem::makeAttributeEditorPage(const QString& attr) {
         case Configs::text: {
             if (attr == QStringLiteral("rule_set")) {
                 auto* ed = new AutoCompleteTextEdit("", geo_items, container);
-                ed->setPlainText(rule->get_current_value_string(attr).join('\n'));
+                {
+                    const QSignalBlocker blocker(ed);
+                    ed->setPlainText(rule->get_current_value_string(attr).join('\n'));
+                }
                 ed->setMinimumHeight(100);
                 ed->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
                 connect(ed, &QPlainTextEdit::textChanged, this, [this, attr, ed] {
@@ -783,7 +801,10 @@ QWidget* RouteItem::makeAttributeEditorPage(const QString& attr) {
                 lay->addWidget(ed, 1);
             } else {
                 auto* te = new QPlainTextEdit(container);
-                te->setPlainText(rule->get_current_value_string(attr).join('\n'));
+                {
+                    const QSignalBlocker blocker(te);
+                    te->setPlainText(rule->get_current_value_string(attr).join('\n'));
+                }
                 te->setMinimumHeight(100);
                 te->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
                 connect(te, &QPlainTextEdit::textChanged, this, [this, attr, te] {
@@ -798,7 +819,7 @@ QWidget* RouteItem::makeAttributeEditorPage(const QString& attr) {
         }
     }
     container->setMinimumHeight(100);
-    container->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    container->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     return container;
 }
 
@@ -810,7 +831,8 @@ void RouteItem::ensurePlusTabBuiltOnce() {
     lay->setContentsMargins(8, 8, 8, 8);
 
     auto* hint = new QLabel(tr("Check attributes to show as tabs; unchecking clears their values."), container);
-    hint->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    hint->setWordWrap(true);
+    hint->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     ruleAttrPlusList = new QListWidget(container);
     ruleAttrPlusList->setMinimumHeight(100);
     ruleAttrPlusList->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -825,7 +847,7 @@ void RouteItem::ensurePlusTabBuiltOnce() {
     lay->addWidget(hint);
     lay->addWidget(ruleAttrPlusList);
     container->setMinimumHeight(100);
-    container->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    container->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     ui->rule_attr_tabs->addTab(container, QStringLiteral("+"));
     ui->rule_attr_tabs->tabBar()->setTabButton(ui->rule_attr_tabs->count() - 1, QTabBar::RightSide, nullptr);
 }
