@@ -17,6 +17,7 @@
 #include <QGuiApplication>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QListView>
 #include <QListWidget>
 #include <QMessageBox>
 #include <QPlainTextEdit>
@@ -25,6 +26,7 @@
 #include <QSet>
 #include <QSizePolicy>
 #include <QStackedWidget>
+#include <QStringListModel>
 #include <QGridLayout>
 #include <QMouseEvent>
 #include <QSignalBlocker>
@@ -33,23 +35,21 @@
 
 void adjustComboBoxWidth(const QComboBox *comboBox) {
     int maxWidth = 0;
+    const QFontMetrics fontMetrics(comboBox->font());
+    const int count = comboBox->count();
 
-    for (int i = 0; i < comboBox->count(); ++i) {
-        QFontMetrics fontMetrics(comboBox->font());
+    for (int i = 0; i < count; ++i) {
         int itemWidth = fontMetrics.horizontalAdvance(comboBox->itemText(i));
         maxWidth = qMax(maxWidth, itemWidth);
     }
 
     maxWidth += 30;
-    comboBox->view()->setMinimumWidth(maxWidth);
-}
-
-QString get_outbound_name(int id) {
-    if (id == -1) return "proxy";
-    if (id == -2) return "direct";
-    if (id == Configs::warpBypassID) return "warp-bypass";
-    if (auto profile = Configs::dataManager->profilesRepo->GetProfile(id)) return profile->name;
-    return "INVALID OUTBOUND";
+    if (const auto *scr = comboBox->screen() != nullptr ? comboBox->screen() : QGuiApplication::primaryScreen()) {
+        maxWidth = qMin(maxWidth, scr->availableGeometry().width() * 2 / 3);
+    }
+    if (auto* view = comboBox->view()) {
+        view->setMinimumWidth(maxWidth);
+    }
 }
 
 RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfile>& routeChain)
@@ -95,19 +95,25 @@ RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfil
     outboundMap[1] = -2;
     outboundMap[2] = Configs::warpBypassID;
     auto proxyListRaw = Configs::dataManager->profilesRepo->GetAllProfileIDNameMapped();
-    QMap<int, QString> idToName;
+    QHash<int, QString> idToName;
+    idToName.reserve(static_cast<int>(proxyListRaw.size()));
     for (const auto& [id, name] : proxyListRaw) idToName.insert(id, name);
     auto groupIDs = Configs::dataManager->groupsRepo->GetGroupsTabOrder();
     for (auto groupID : groupIDs) {
         auto group = Configs::dataManager->groupsRepo->GetGroup(groupID);
         if (!group) continue;
         for (int profileID : group->profiles) {
-            if (!idToName.contains(profileID)) continue;
+            auto it = idToName.constFind(profileID);
+            if (it == idToName.cend()) continue;
             outboundMap[outboundMap.size()] = profileID;
-            outbounds << QString("[" + group->name + "] ") + idToName[profileID];
+            outbounds << QString("[" + group->name + "] ") + it.value();
         }
     }
 
+    auto* outboundsModel = new QStringListModel(outbounds, this);
+    outboundsModel->setObjectName(QStringLiteral("cached_outbounds_model"));
+
+    geo_items.reserve(static_cast<int>(ruleSetList.size()));
     for (const auto& item : ruleSetList) {
         geo_items.append(QString::fromUtf8(item.first.data(), item.first.size()));
     }
@@ -138,6 +144,7 @@ RouteItem::RouteItem(QWidget *parent, const std::shared_ptr<Configs::RouteProfil
     ui->def_out->setCurrentText(Configs::outboundIDToString(chain->defaultOutboundID));
 
     QStringList ruleItems = {"domain:", "suffix:", "regex:", "keyword:", "ip:", "processName:", "processPath:", "ruleset:"};
+    ruleItems.reserve(ruleItems.size() + static_cast<int>(ruleSetList.size()));
     for (const auto& item : ruleSetList) {
         ruleItems.append("ruleset:" + QString::fromUtf8(item.first.data(), item.first.size()));
     }
@@ -694,6 +701,7 @@ QWidget* RouteItem::makeAttributeEditorPage(const QString& attr) {
             auto* cb = new QComboBox(container);
             cb->addItems({QStringLiteral("false"), QStringLiteral("true")});
             cb->setCurrentText(rule->get_current_value_bool(attr));
+            adjustComboBoxWidth(cb);
             connect(cb, &QComboBox::currentTextChanged, this, [this, attr](const QString& t) {
                 if (currentIndex < 0) return;
                 chain->Rules[currentIndex]->set_field_value(attr, {t});
@@ -707,8 +715,38 @@ QWidget* RouteItem::makeAttributeEditorPage(const QString& attr) {
             auto* cb = new QComboBox(container);
             if (attr == QStringLiteral("outbound")) {
                 cb->setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLengthWithIcon);
-                cb->addItems(outbounds);
-                cb->setCurrentText(get_outbound_name(rule->outboundID));
+                if (auto* lv = qobject_cast<QListView*>(cb->view())) {
+                    lv->setUniformItemSizes(true);
+                }
+                if (auto* model = this->findChild<QStringListModel*>(QStringLiteral("cached_outbounds_model"), Qt::FindDirectChildrenOnly)) {
+                    cb->setModel(model);
+                }
+
+                int targetIdx = 0;
+                for (auto it = outboundMap.cbegin(); it != outboundMap.cend(); ++it) {
+                    if (it->second == rule->outboundID) {
+                        targetIdx = it->first;
+                        break;
+                    }
+                }
+                cb->setCurrentIndex(targetIdx);
+
+                int cachedWidth = this->property("cached_outbounds_width").toInt();
+                if (cachedWidth <= 0) {
+                    const QFontMetrics fm(cb->font());
+                    for (const QString& item : outbounds) {
+                        cachedWidth = qMax(cachedWidth, fm.horizontalAdvance(item));
+                    }
+                    cachedWidth += 30;
+                    if (const auto *scr = this->screen() != nullptr ? this->screen() : QGuiApplication::primaryScreen()) {
+                        cachedWidth = qMin(cachedWidth, scr->availableGeometry().width() * 2 / 3);
+                    }
+                    this->setProperty("cached_outbounds_width", cachedWidth);
+                }
+                if (auto* view = cb->view()) {
+                    view->setMinimumWidth(cachedWidth);
+                }
+
                 connect(cb, &QComboBox::currentTextChanged, this, [this, cb] {
                     if (currentIndex < 0) return;
                     chain->Rules[currentIndex]->set_field_value(QStringLiteral("outbound"),
@@ -719,6 +757,7 @@ QWidget* RouteItem::makeAttributeEditorPage(const QString& attr) {
                 cb->addItems(Configs::RouteRule::get_values_for_field(attr));
                 const auto cur = rule->get_current_value_string(attr);
                 cb->setCurrentText(cur.isEmpty() ? QString() : cur[0]);
+                adjustComboBoxWidth(cb);
                 connect(cb, &QComboBox::currentTextChanged, this, [this, attr](const QString& t) {
                     if (currentIndex < 0) return;
                     chain->Rules[currentIndex]->set_field_value(attr, {t});
@@ -726,7 +765,6 @@ QWidget* RouteItem::makeAttributeEditorPage(const QString& attr) {
                 });
             }
             addDisabled(cb);
-            adjustComboBoxWidth(cb);
             lay->addWidget(cb);
             break;
         }
