@@ -115,7 +115,7 @@ void adjustComboBoxWidth(const QComboBox *comboBox) {
 
         // Once the width cap is reached, measuring more entries cannot change the result.
         if (maxWidth < maxTextWidth) {
-            QList<int> lengths;
+            QList<qsizetype> lengths;
             lengths.reserve(count);
             for (int i = 0; i < count; ++i) lengths.append(comboBox->itemText(i).size());
 
