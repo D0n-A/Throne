@@ -89,6 +89,9 @@ static bool routeItemNeedsRulesTab(const Configs::RouteProfile& profile) {
 }
 
 void adjustComboBoxWidth(const QComboBox *comboBox) {
+    // Avoid shaping every profile name on the GUI thread when subscriptions contain thousands
+    // of entries. QString::size() is a cheap heuristic for likely wide candidates, not a guarantee
+    // of the widest rendered name; the popup is capped to the available screen width below.
     constexpr int maxMeasuredItems = 64;
     constexpr int padding = 30;
 
