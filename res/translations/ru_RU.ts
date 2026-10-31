@@ -12429,12 +12429,12 @@ Remove that endpoint from this routing profile as well?</source>
         <translation>Осталось %1 мин.</translation>
     </message>
     <message>
-        <source>%1h left</source>
-        <translation>Осталось %1 ч.</translation>
+        <source>%1h %2m left</source>
+        <translation>Осталось %1 ч. %2 мин.</translation>
     </message>
     <message>
-        <source>%1d left</source>
-        <translation>Осталось %1 д.</translation>
+        <source>%1d %2h left</source>
+        <translation>Осталось %1 д. %2 ч.</translation>
     </message>
     <message>
         <source>Announcement - %1</source>
