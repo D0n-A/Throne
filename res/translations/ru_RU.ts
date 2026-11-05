@@ -2338,7 +2338,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Pinned Cert SHA256</source>
-        <translation>Pinned Cert SHA256</translation>
+        <translation>Закрепление сертификата (SHA-256)</translation>
     </message>
     <message>
         <source>pinnedPeerCertSha256: hex SHA256 of the peer certificate (comma-separated for multiple). Replacement for allowInsecure.</source>
@@ -2346,7 +2346,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Verify Cert Name</source>
-        <translation>Verify Cert Name</translation>
+        <translation>Имя для проверки сертификата</translation>
     </message>
     <message>
         <source>verifyPeerCertByName: verify the peer certificate against this name instead of the SNI.</source>
@@ -2354,7 +2354,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>ECH Config List</source>
-        <translation>ECH Config List</translation>
+        <translation>Список конфигураций ECH</translation>
     </message>
     <message>
         <source>echConfigList: a base64 ECHConfigList, or &quot;domain+https://dns/dns-query&quot; to let Xray fetch it over DoH (e.g. cloudflare-ech.com+https://8.8.8.8/dns-query).</source>
@@ -2506,19 +2506,19 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Max Concurrency</source>
-        <translation>Max Concurrency</translation>
+        <translation>Макс. число одновременных потоков</translation>
     </message>
     <message>
         <source>Max Post Bytes</source>
-        <translation>Max Post Bytes</translation>
+        <translation>Макс. размер POST-запроса (байт)</translation>
     </message>
     <message>
         <source>Max Reusable Secs</source>
-        <translation>Max Reusable Secs</translation>
+        <translation>Макс. время повторного использования соединения (с)</translation>
     </message>
     <message>
         <source>Max Request Times</source>
-        <translation>Max Request Times</translation>
+        <translation>Макс. число запросов на соединение</translation>
     </message>
     <message>
         <source>Host</source>
@@ -2526,11 +2526,11 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>X Padding Bytes</source>
-        <translation>X Padding Bytes</translation>
+        <translation>Размер X-Padding (байт)</translation>
     </message>
     <message>
         <source>Min Post Interval</source>
-        <translation>Min Post Interval</translation>
+        <translation>Мин. интервал между POST-запросами (мс)</translation>
     </message>
     <message>
         <source>Mode</source>
@@ -2538,11 +2538,11 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>No GRPC Headers</source>
-        <translation>No GRPC Headers</translation>
+        <translation>Не добавлять заголовок gRPC</translation>
     </message>
     <message>
         <source>Max Reuse times</source>
-        <translation>Max Reuse Times</translation>
+        <translation>Макс. число повторных использований соединения</translation>
     </message>
     <message>
         <source>Keep Alive Period</source>
@@ -2554,7 +2554,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Padding Obfuscation</source>
-        <translation>Padding Obfuscation</translation>
+        <translation>Обфускация X-Padding</translation>
     </message>
     <message>
         <source>Max Connections</source>
@@ -2680,7 +2680,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Server Max Header Bytes</source>
-        <translation>Server Max Header Bytes</translation>
+        <translation>Макс. размер заголовка запроса (байт)</translation>
     </message>
     <message>
         <source>Maximum request header size accepted by the server. Default: 8192.</source>
@@ -2696,7 +2696,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Padding Method</source>
-        <translation>Padding Method</translation>
+        <translation>Формат X-Padding</translation>
     </message>
     <message>
         <source>Padding value format: repeat-x or tokenish. Default: repeat-x.</source>
@@ -2704,7 +2704,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Padding Placement</source>
-        <translation>Padding Placement</translation>
+        <translation>Размещение X-Padding</translation>
     </message>
     <message>
         <source>Where X-Padding is sent: queryInHeader, cookie, header, or query. Default: queryInHeader.</source>
@@ -2712,7 +2712,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Padding Key</source>
-        <translation>Padding Key</translation>
+        <translation>Ключ X-Padding</translation>
     </message>
     <message>
         <source>Query or cookie key for X-Padding, and query key inside queryInHeader. Default: x_padding.</source>
@@ -2720,7 +2720,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Padding Header</source>
-        <translation>Padding Header</translation>
+        <translation>Заголовок X-Padding</translation>
     </message>
     <message>
         <source>Header name used by header or queryInHeader padding. Default: X-Padding.</source>
@@ -2736,7 +2736,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Max Buffered Posts</source>
-        <translation>Max Buffered Posts</translation>
+        <translation>Макс. число POST-запросов в очереди</translation>
     </message>
     <message>
         <source>Packet-up server upload queue size per proxied connection. Default: 30.</source>
@@ -2744,7 +2744,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Uplink HTTP Method</source>
-        <translation>Uplink HTTP Method</translation>
+        <translation>HTTP-метод отправки данных</translation>
     </message>
     <message>
         <source>HTTP method for upload requests. Default: POST. Xray uppercases it; GET is accepted only in packet-up mode.</source>
@@ -2752,7 +2752,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Uplink Data Placement</source>
-        <translation>Uplink Data Placement</translation>
+        <translation>Размещение отправляемых данных</translation>
     </message>
     <message>
         <source>Where upload data is placed. Default: auto. cookie/header are accepted only in packet-up mode; auto/body are always accepted.</source>
@@ -2760,7 +2760,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Uplink Data Key</source>
-        <translation>Uplink Data Key</translation>
+        <translation>Ключ отправляемых данных</translation>
     </message>
     <message>
         <source>Key used when upload data is placed in a cookie or header. Defaults: X-Data for auto/header, x_data for cookie.</source>
@@ -2768,7 +2768,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Uplink Chunk Size</source>
-        <translation>Uplink Chunk Size</translation>
+        <translation>Размер фрагмента отправляемых данных</translation>
     </message>
     <message>
         <source>Packet-up header/cookie payload chunk size range. Defaults: cookie 2-3 KiB, header 3-4 KB, otherwise scMaxEachPostBytes. Values below 64 are clamped.</source>
@@ -2780,7 +2780,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>No SSE Headers</source>
-        <translation>No SSE Headers</translation>
+        <translation>Не отправлять заголовок SSE</translation>
     </message>
     <message>
         <source>Server-side downstream/stream-one option: do not send Content-Type: text/event-stream in responses.</source>
@@ -2788,7 +2788,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Stream Up Server Seconds</source>
-        <translation>Stream Up Server Seconds</translation>
+        <translation>Интервал keepalive сервера в режиме stream-up (с)</translation>
     </message>
     <message>
         <source>Stream-up server interval for periodic xPaddingBytes keepalive writes, in seconds. Default: 20-80; values &lt;= 0 disable periodic padding.</source>
@@ -2796,7 +2796,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Session Placement</source>
-        <translation>Session Placement</translation>
+        <translation>Размещение ID сессии</translation>
     </message>
     <message>
         <source>Where the XHTTP session id is sent: path, cookie, header, or query. Default: path.</source>
@@ -2804,7 +2804,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Session Key</source>
-        <translation>Session Key</translation>
+        <translation>Ключ ID сессии</translation>
     </message>
     <message>
         <source>Key used for the session id outside path placement. Defaults: x_session for cookie/query, X-Session for header.</source>
@@ -2812,7 +2812,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Session ID Table</source>
-        <translation>Session ID Table</translation>
+        <translation>Набор символов ID сессии</translation>
     </message>
     <message>
         <source>Charset for generating the XHTTP session id: a predefined name (number, hex, HEX, base36, BASE36, alphabet, ALPHABET, Alphabet, Base62) or a literal ASCII string. Empty falls back to a random UUID.</source>
@@ -2820,7 +2820,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Session ID Length</source>
-        <translation>Session ID Length</translation>
+        <translation>Длина ID сессии</translation>
     </message>
     <message>
         <source>Length range of the generated session id, e.g. 8-16. Only used together with sessionIDTable; &quot;from&quot; must be greater than 0.</source>
@@ -2828,7 +2828,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Sequence Placement</source>
-        <translation>Sequence Placement</translation>
+        <translation>Размещение последовательности пакетов</translation>
     </message>
     <message>
         <source>Where the XHTTP packet sequence is sent: path, cookie, header, or query. Default: path.</source>
@@ -2836,7 +2836,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Sequence Key</source>
-        <translation>Sequence Key</translation>
+        <translation>Ключ последовательности пакетов</translation>
     </message>
     <message>
         <source>Key used for the sequence value outside path placement. Defaults: x_seq for cookie/query, X-Seq for header.</source>
