@@ -2274,7 +2274,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Service Name</source>
-        <translation>Service Name</translation>
+        <translation>Имя сервиса</translation>
     </message>
     <message>
         <source>TLS Security Settings</source>
@@ -2286,7 +2286,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Allow insecure</source>
-        <translation>Allow insecure</translation>
+        <translation>Разрешить небезопасное подключение</translation>
     </message>
     <message>
         <source>Certificate</source>
@@ -2522,7 +2522,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Host</source>
-        <translation>Host</translation>
+        <translation>Хост</translation>
     </message>
     <message>
         <source>X Padding Bytes</source>
@@ -2558,11 +2558,11 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Max Connections</source>
-        <translation>Max Connections</translation>
+        <translation>Макс. соединений</translation>
     </message>
     <message>
         <source>Path</source>
-        <translation>Path</translation>
+        <translation>Путь</translation>
     </message>
     <message>
         <source>Application layer protocol negotiation, clear text. Please separate them with commas.</source>
@@ -2900,15 +2900,15 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Client ID</source>
-        <translation>Client ID</translation>
+        <translation>ID клиента</translation>
     </message>
     <message>
         <source>Client Secret</source>
-        <translation>Client Secret</translation>
+        <translation>Секрет клиента</translation>
     </message>
     <message>
         <source>Refresh Token</source>
-        <translation>Refresh Token</translation>
+        <translation>Токен обновления</translation>
     </message>
     <message>
         <source>Endpoint</source>
@@ -2928,15 +2928,15 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Access Key ID</source>
-        <translation>Access Key ID</translation>
+        <translation>ID ключа доступа</translation>
     </message>
     <message>
         <source>Secret Access Key</source>
-        <translation>Secret Access Key</translation>
+        <translation>Секретный ключ доступа</translation>
     </message>
     <message>
         <source>Session Token</source>
-        <translation>Session Token</translation>
+        <translation>Токен сессии</translation>
     </message>
     <message>
         <source>Secrets</source>
@@ -4769,7 +4769,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>Path</source>
-        <translation>Path</translation>
+        <translation>Путь</translation>
     </message>
     <message>
         <source>None (TLS handshake only)</source>
@@ -6990,7 +6990,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Allow insecure</source>
-        <translation>Allow insecure</translation>
+        <translation>Разрешить небезопасное подключение</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Server name used for TLS SNI and certificate hostname verification. The hostname from the address is used when empty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
