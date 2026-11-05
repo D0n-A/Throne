@@ -2546,7 +2546,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Keep Alive Period</source>
-        <translation>Keep Alive Period</translation>
+        <translation>Интервал поддержания активности</translation>
     </message>
     <message>
         <source>Download Settings</source>
@@ -4546,23 +4546,23 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>Idle Timeout</source>
-        <translation>Idle Timeout</translation>
+        <translation>Тайм-аут простоя</translation>
     </message>
     <message>
         <source>Keep Alive Period</source>
-        <translation>Keep Alive Period</translation>
+        <translation>Интервал поддержания активности</translation>
     </message>
     <message>
         <source>Stream Receive Window</source>
-        <translation>Stream Receive Window</translation>
+        <translation>Окно приёма потока</translation>
     </message>
     <message>
         <source>Connection Receive Window</source>
-        <translation>Connection Receive Window</translation>
+        <translation>Окно приёма соединения</translation>
     </message>
     <message>
         <source>Max Concurrent Streams</source>
-        <translation>Max Concurrent Streams</translation>
+        <translation>Макс. число одновременных потоков</translation>
     </message>
     <message>
         <source>QUIC Parameters</source>
@@ -4570,7 +4570,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>Initial Packet Size</source>
-        <translation>Initial Packet Size</translation>
+        <translation>Начальный размер пакета</translation>
     </message>
     <message>
         <source>Disable Path MTU Discovery</source>
@@ -5546,7 +5546,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>Dial Fields</source>
-        <translation>Dial Fields</translation>
+        <translation>Параметры подключения</translation>
     </message>
     <message>
         <source>Connect Timeout</source>
@@ -5554,15 +5554,15 @@ Close without saving?</source>
     </message>
     <message>
         <source>Bind Interface</source>
-        <translation>Bind Interface</translation>
+        <translation>Интерфейс привязки</translation>
     </message>
     <message>
         <source>IPv4 Bind Address</source>
-        <translation>IPv4 Bind Address</translation>
+        <translation>Адрес привязки IPv4</translation>
     </message>
     <message>
         <source>IPv6 Bind Address</source>
-        <translation>IPv6 Bind Address</translation>
+        <translation>Адрес привязки IPv6</translation>
     </message>
     <message>
         <source>TCP Fast Open</source>
@@ -5574,7 +5574,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>Reuse Address</source>
-        <translation>Reuse Address</translation>
+        <translation>Повторно использовать адрес</translation>
     </message>
     <message>
         <source>Server Address</source>
@@ -5694,7 +5694,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>ECH Config</source>
-        <translation>ECH Config</translation>
+        <translation>Конфигурация ECH</translation>
     </message>
     <message>
         <source>Not Set</source>
@@ -5706,7 +5706,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>Certificate SHA256</source>
-        <translation>Certificate SHA256</translation>
+        <translation>SHA-256 сертификата</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SHA-256 of the server certificate&apos;s public key in base64, one per line. A match replaces CA verification and survives renewals that keep the key.&lt;/p&gt;&lt;p&gt;Cannot be combined with a custom Certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -5714,7 +5714,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>Public Key SHA256</source>
-        <translation>Public Key SHA256</translation>
+        <translation>SHA-256 открытого ключа</translation>
     </message>
     <message>
         <source>Client Certificate</source>
@@ -5734,27 +5734,27 @@ Close without saving?</source>
     </message>
     <message>
         <source>Idle Timeout</source>
-        <translation>Idle Timeout</translation>
+        <translation>Тайм-аут простоя</translation>
     </message>
     <message>
         <source>Keep Alive Period</source>
-        <translation>Keep Alive Period</translation>
+        <translation>Интервал поддержания активности</translation>
     </message>
     <message>
         <source>Stream Receive Window</source>
-        <translation>Stream Receive Window</translation>
+        <translation>Окно приёма потока</translation>
     </message>
     <message>
         <source>Connection Receive Window</source>
-        <translation>Connection Receive Window</translation>
+        <translation>Окно приёма соединения</translation>
     </message>
     <message>
         <source>Max Concurrent Streams</source>
-        <translation>Max Concurrent Streams</translation>
+        <translation>Макс. число одновременных потоков</translation>
     </message>
     <message>
         <source>Initial Packet Size</source>
-        <translation>Initial Packet Size</translation>
+        <translation>Начальный размер пакета</translation>
     </message>
     <message>
         <source>Disable Path MTU Discovery</source>
@@ -6392,7 +6392,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Idle Timeout</source>
-        <translation>Idle Timeout</translation>
+        <translation>Тайм-аут простоя</translation>
     </message>
     <message>
         <source>Keepalive Interval</source>
