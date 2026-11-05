@@ -8734,51 +8734,51 @@ Improves hole-punching reliability. Requires IPv4.</source>
     <name>EditWireguardAmnezia</name>
     <message>
         <source>Cookie Reply Packet Junk Size (S3)</source>
-        <translation>Cookie Reply Packet Junk Size (S3)</translation>
+        <translation>Размер случайного префикса пакета Cookie Reply (S3)</translation>
     </message>
     <message>
         <source>Cookie Reply Packet Magic Header (H3)</source>
-        <translation>Cookie Reply Packet Magic Header (H3)</translation>
+        <translation>Магический заголовок пакета Cookie Reply (H3)</translation>
     </message>
     <message>
         <source>Junk Packet Count (Jc)</source>
-        <translation>Junk Packet Count (Jc)</translation>
+        <translation>Количество junk-пакетов (Jc)</translation>
     </message>
     <message>
         <source>Response Packet Magic Header (H2)</source>
-        <translation>Response Packet Magic Header (H2)</translation>
+        <translation>Магический заголовок пакета Response (H2)</translation>
     </message>
     <message>
         <source>Init Packet Junk Size (S1)</source>
-        <translation>Init Packet Junk Size (S1)</translation>
+        <translation>Размер случайного префикса пакета Init (S1)</translation>
     </message>
     <message>
         <source>Junk Packet Min Size (Jmin)</source>
-        <translation>Junk Packet Min Size (Jmin)</translation>
+        <translation>Мин. размер junk-пакета (Jmin)</translation>
     </message>
     <message>
         <source>Junk Packet Max Size (Jmax)</source>
-        <translation>Junk Packet Max Size (Jmax)</translation>
+        <translation>Макс. размер junk-пакета (Jmax)</translation>
     </message>
     <message>
         <source>Signature Packet (I4)</source>
-        <translation>Signature Packet (I4)</translation>
+        <translation>Маскировочный пакет (I4)</translation>
     </message>
     <message>
         <source>Signature Packet (I1)</source>
-        <translation>Signature Packet (I1)</translation>
+        <translation>Маскировочный пакет (I1)</translation>
     </message>
     <message>
         <source>Response Packet Junk Size (S2)</source>
-        <translation>Response Packet Junk Size (S2)</translation>
+        <translation>Размер случайного префикса пакета Response (S2)</translation>
     </message>
     <message>
         <source>Transport Packet Magic Header (H4)</source>
-        <translation>Transport Packet Magic Header (H4)</translation>
+        <translation>Магический заголовок транспортного пакета (H4)</translation>
     </message>
     <message>
         <source>Init Packet Magic Header (H1)</source>
-        <translation>Init Packet Magic Header (H1)</translation>
+        <translation>Магический заголовок пакета Init (H1)</translation>
     </message>
     <message>
         <source>Amnezia Options</source>
@@ -8786,19 +8786,19 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Transport Packet Junk Size (S4)</source>
-        <translation>Transport Packet Junk Size (S4)</translation>
+        <translation>Размер случайного префикса транспортного пакета (S4)</translation>
     </message>
     <message>
         <source>Signature Packet (I2)</source>
-        <translation>Signature Packet (I2)</translation>
+        <translation>Маскировочный пакет (I2)</translation>
     </message>
     <message>
         <source>Signature Packet (I3)</source>
-        <translation>Signature Packet (I3)</translation>
+        <translation>Маскировочный пакет (I3)</translation>
     </message>
     <message>
         <source>Signature Packet (I5)</source>
-        <translation>Signature Packet (I5)</translation>
+        <translation>Маскировочный пакет (I5)</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fills the signature packets with the first QUIC packets Chrome would send to the given domain, so the handshake starts like an HTTP/3 connection to it. Generated locally; nothing is sent. Replaces I1-I5.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8814,7 +8814,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Header Protection Key</source>
-        <translation>Header Protection Key</translation>
+        <translation>Ключ защиты заголовков</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.0. Bytes of random trailing padding, as a value or range (e.g. 0-64).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8822,7 +8822,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Content Padding Addition</source>
-        <translation>Content Padding Addition</translation>
+        <translation>Дополнение содержимого пакетов</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.0. Seconds before a rekey is attempted, as a value or range.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8830,7 +8830,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Rekey After Time</source>
-        <translation>Rekey After Time</translation>
+        <translation>Интервал до повторного хендшейка</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.0. Seconds before a handshake is retried, as a value or range.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8838,7 +8838,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Rekey Timeout</source>
-        <translation>Rekey Timeout</translation>
+        <translation>Тайм-аут хендшейка</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.0. Seconds before keys are rejected, as a value or range.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8846,7 +8846,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Reject After Time</source>
-        <translation>Reject After Time</translation>
+        <translation>Интервал до нового хендшейка при отсутствии данных</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.0. Seconds of idle time before a keepalive is sent, as a value or range.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8854,7 +8854,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Keepalive Timeout</source>
-        <translation>Keepalive Timeout</translation>
+        <translation>Интервал до отправки keepalive</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.0. Handshake retries before giving up, as a value or range.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8862,7 +8862,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Max Handshake Attempts</source>
-        <translation>Max Handshake Attempts</translation>
+        <translation>Макс. число повторов хендшейка</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.1. Appends a random trailer to every packet, so message types are no longer identifiable by size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8870,7 +8870,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Random Trailers</source>
-        <translation>Random Trailers</translation>
+        <translation>Случайные окончания пакетов</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;AmneziaWG 3.1. Never send cookie replies, so an under-load peer stays silent instead of answering with a fixed-size message.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8878,7 +8878,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Disable Cookies</source>
-        <translation>Отключить cookie</translation>
+        <translation>Отключить отправку Cookie Reply</translation>
     </message>
     <message>
         <source>QUIC Signature</source>
