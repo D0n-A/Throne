@@ -2330,7 +2330,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Fingerprint</source>
-        <translation>Fingerprint</translation>
+        <translation>Отпечаток TLS</translation>
     </message>
     <message>
         <source>ALPN</source>
@@ -4502,7 +4502,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>Default Fingerprint</source>
-        <translation>Fingerprint по умолчанию</translation>
+        <translation>Отпечаток TLS по умолчанию</translation>
     </message>
     <message>
         <source>TLS Spoof</source>
@@ -4534,7 +4534,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>HTTP/2 &amp;&amp; QUIC</source>
-        <translation>HTTP/2 &amp;&amp; QUIC</translation>
+        <translation>HTTP/2 и QUIC</translation>
     </message>
     <message>
         <source>HTTP/2 parameters also apply to Hysteria, Hysteria2 and TUIC. Empty keeps the core&apos;s default.</source>
