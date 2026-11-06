@@ -937,7 +937,7 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Secret</source>
-        <translation>Secret</translation>
+        <translation>Секрет</translation>
     </message>
     <message>
         <source>sing-box API / Dashboard</source>
@@ -1584,7 +1584,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>URL</source>
-        <translation>URL</translation>
+        <translation>URL-адрес</translation>
     </message>
     <message>
         <source>Advanced</source>
@@ -1890,7 +1890,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>URL</source>
-        <translation>URL</translation>
+        <translation>URL-адрес</translation>
     </message>
     <message>
         <source>Rule-set</source>
@@ -2083,7 +2083,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Secret</source>
-        <translation>Secret</translation>
+        <translation>Секрет</translation>
     </message>
     <message>
         <source>Base32 secret</source>
@@ -2366,7 +2366,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Reality Pbk</source>
-        <translation>Reality Pbk</translation>
+        <translation>Публичный ключ REALITY</translation>
     </message>
     <message>
         <source>Reality SpiderX</source>
@@ -7137,7 +7137,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Secret</source>
-        <translation>Secret</translation>
+        <translation>Секрет</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Path to the token secret or access token. Conflicts with the inline secret.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -12861,7 +12861,7 @@ outbound и другие функции Throne могут не работать.
     </message>
     <message>
         <source>URL</source>
-        <translation>URL</translation>
+        <translation>URL-адрес</translation>
     </message>
     <message>
         <source>https://... (throne://route link, base64, or JSON)</source>
@@ -14566,7 +14566,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Realm URL: %1</source>
-        <translation>Realm URL: %1</translation>
+        <translation>URL сервиса Realm: %1</translation>
     </message>
     <message>
         <source>STUN Servers: %1</source>
