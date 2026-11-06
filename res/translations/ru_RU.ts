@@ -681,7 +681,7 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Kill Switch</source>
-        <translation>Kill switch</translation>
+        <translation>Блокировка трафика в обход Throne</translation>
     </message>
     <message>
         <source>Skip TLS certificate authentication by default (allowInsecure)</source>
@@ -1719,7 +1719,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Send HWID</source>
-        <translation>Отправлять HWID</translation>
+        <translation>Отправлять идентификатор оборудования</translation>
     </message>
     <message>
         <source>On</source>
@@ -1731,7 +1731,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>HWID</source>
-        <translation>HWID</translation>
+        <translation>Идентификатор оборудования (HWID)</translation>
     </message>
     <message>
         <source>OS</source>
@@ -3607,7 +3607,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Warp</source>
-        <translation>Warp</translation>
+        <translation>WARP</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables the following config to be used as egress, useful for bypassing services restrciting non-warp VPNs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -3619,7 +3619,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Endpoint</source>
-        <translation>Endpoint</translation>
+        <translation>Адрес сервера</translation>
     </message>
     <message>
         <source>Private Key</source>
@@ -3767,7 +3767,7 @@ For more information, see the document &quot;Configuration/DNS&quot;.</source>
     </message>
     <message>
         <source>Peer Public Key</source>
-        <translation>Peer Public Key</translation>
+        <translation>Публичный ключ сервера</translation>
     </message>
     <message>
         <source>HTTP/3 runs over UDP; HTTP/2 runs over TLS on TCP and works where UDP is blocked.</source>
@@ -5460,11 +5460,11 @@ Close without saving?</source>
     </message>
     <message>
         <source>IPv4 CIDR</source>
-        <translation>IPv4 CIDR</translation>
+        <translation>Подсеть IPv4 (CIDR)</translation>
     </message>
     <message>
         <source>IPv6 CIDR</source>
-        <translation>IPv6 CIDR</translation>
+        <translation>Подсеть IPv6 (CIDR)</translation>
     </message>
     <message>
         <source>Restart Core</source>
@@ -5833,7 +5833,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>Min Idle Session</source>
-        <translation>Min Idle Session</translation>
+        <translation>Мин. число свободных сессий</translation>
     </message>
 </context>
 <context>
@@ -6501,7 +6501,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Hop Interval</source>
-        <translation>Hop Interval</translation>
+        <translation>Интервал смены порта</translation>
     </message>
     <message>
         <source>Server Ports</source>
@@ -6517,7 +6517,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Hop Interval Max</source>
-        <translation>Hop Interval Max</translation>
+        <translation>Макс. интервал смены порта</translation>
     </message>
     <message>
         <source>When set, each hop waits a random duration between Hop Interval and this value. Requires Hop Interval.</source>
@@ -6533,7 +6533,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Authentication Payload</source>
-        <translation>Authentication Payload</translation>
+        <translation>Данные для аутентификации</translation>
     </message>
     <message>
         <source>Obfuscation</source>
@@ -6610,11 +6610,11 @@ rendezvous service. Replaces the server address and port.</source>
     </message>
     <message>
         <source>Realm URL</source>
-        <translation>Realm URL</translation>
+        <translation>URL сервиса Realm</translation>
     </message>
     <message>
         <source>Realm ID</source>
-        <translation>Realm ID</translation>
+        <translation>Идентификатор сервера в Realm</translation>
     </message>
     <message>
         <source>The slot the target Hysteria2 server registered on the realm.</source>
@@ -6622,7 +6622,7 @@ rendezvous service. Replaces the server address and port.</source>
     </message>
     <message>
         <source>Realm Token</source>
-        <translation>Realm Token</translation>
+        <translation>Токен доступа к Realm</translation>
     </message>
     <message>
         <source>STUN Servers</source>
@@ -6682,7 +6682,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Peer Public Key</source>
-        <translation>Peer Public Key</translation>
+        <translation>Публичный ключ сервера</translation>
     </message>
     <message>
         <source>Comma separated list of the tunnel&apos;s own addresses, e.g. 172.16.0.2/32,2606:4700::1/128</source>
@@ -8334,7 +8334,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Host Key</source>
-        <translation>Host Key</translation>
+        <translation>Ключ хоста</translation>
     </message>
     <message>
         <source>Host Key Algorithms</source>
@@ -8403,7 +8403,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>User Key</source>
-        <translation>User Key</translation>
+        <translation>Ключ пользователя</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restrict this outbound to one network. Leave empty to carry both TCP and UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8419,7 +8419,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Obfuscation Host</source>
-        <translation>Obfuscation Host</translation>
+        <translation>Хост для обфускации</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Traffic shaping used by Snell v6. &quot;unsafe-raw&quot; disables padding and is faster but easier to fingerprint.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8578,7 +8578,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     <name>EditTuic</name>
     <message>
         <source>Heartbeat</source>
-        <translation>Heartbeat</translation>
+        <translation>Интервал отправки сигнала активности</translation>
     </message>
     <message>
         <source>UDP Relay Mode</source>
@@ -8602,7 +8602,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>UDP over Stream</source>
-        <translation>UDP over Stream</translation>
+        <translation>Передавать UDP через поток</translation>
     </message>
 </context>
 <context>
@@ -8703,7 +8703,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Workers</source>
-        <translation>Workers</translation>
+        <translation>Число рабочих потоков</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -9106,7 +9106,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>URL %1</source>
-        <translation>URL %1</translation>
+        <translation>URL-адрес %1</translation>
     </message>
     <message>
         <source>Rule-set %1</source>
@@ -9834,7 +9834,7 @@ Download them now?</source>
     </message>
     <message>
         <source>Kill switch</source>
-        <translation>Kill switch</translation>
+        <translation>Блокировка трафика в обход Throne</translation>
     </message>
     <message>
         <source>The kill switch could not be updated to allow this profile&apos;s extra core, so the profile was not started. See the log for details.</source>
@@ -10444,7 +10444,7 @@ Name: %1</source>
     </message>
     <message>
         <source>Warp-bypass</source>
-        <translation>Warp-bypass</translation>
+        <translation>Обход WARP</translation>
     </message>
     <message>
         <source>Modify rules in &quot;%1&quot;</source>
@@ -12891,7 +12891,7 @@ Your local edits are overwritten on each update.</source>
     </message>
     <message>
         <source>Warp-bypass</source>
-        <translation>Warp-bypass</translation>
+        <translation>Обход WARP</translation>
     </message>
     <message>
         <source>Endpoints</source>
