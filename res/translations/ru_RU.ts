@@ -9028,7 +9028,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>A background Throne (PID %1) is running on this computer (data directory: %2). Tun mode is unavailable here while it runs; stop it or use thronectl.</source>
-        <translation>На этом компьютере работает фоновый Throne (PID %1, каталог данных: %2). Пока он работает, режим Tun здесь недоступен; остановите его или используйте thronectl.</translation>
+        <translation>На этом компьютере уже запущен Throne в фоновом режиме (PID %1; каталог данных: %2). Пока он работает, режим Tun недоступен; остановите его или воспользуйтесь thronectl.</translation>
     </message>
 </context>
 <context>
