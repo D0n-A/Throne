@@ -459,7 +459,7 @@ It stays a preference, not a lock: if that profile stops working the selector st
     </message>
     <message>
         <source>Custom Inbound</source>
-        <translation>Польз. inbound</translation>
+        <translation>Пользовательское входящее соединение</translation>
     </message>
     <message>
         <source>Edit</source>
@@ -567,11 +567,11 @@ It stays a preference, not a lock: if that profile stops working the selector st
     </message>
     <message>
         <source>outbound</source>
-        <translation>outbound</translation>
+        <translation>Исходящее соединение</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Which outbound the NTP query is sent through&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Через какой outbound отправляется NTP-запрос&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Через какое исходящее соединение отправляется NTP-запрос&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Xray Core</source>
@@ -681,7 +681,7 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Kill Switch</source>
-        <translation>Блокировка трафика в обход Throne</translation>
+        <translation>Аварийная блокировка</translation>
     </message>
     <message>
         <source>Skip TLS certificate authentication by default (allowInsecure)</source>
@@ -697,11 +697,11 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Inbound Username</source>
-        <translation>Имя пользователя для inbound</translation>
+        <translation>Имя пользователя для входящего соединения</translation>
     </message>
     <message>
         <source>Inbound Password</source>
-        <translation>Пароль для inbound</translation>
+        <translation>Пароль для входящего соединения</translation>
     </message>
     <message>
         <source>Enable Authorization</source>
@@ -709,7 +709,7 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Disable Mixed Inbound</source>
-        <translation>Отключить mixed inbound</translation>
+        <translation>Отключить смешанное входящее соединение</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use proxy for subscription request, update request etc&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -721,7 +721,7 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Inbound Settings</source>
-        <translation>Настройки inbound</translation>
+        <translation>Настройки входящего соединения</translation>
     </message>
     <message>
         <source>Testing</source>
@@ -1203,7 +1203,7 @@ Select which parts to restore:</source>
     </message>
     <message>
         <source>Mixed inbound</source>
-        <translation>Mixed inbound</translation>
+        <translation>Смешанное входящее соединение</translation>
     </message>
     <message>
         <source>DNS server</source>
@@ -2578,7 +2578,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Custom (%1 outbound)</source>
-        <translation>Пользовательский (%1 outbound)</translation>
+        <translation>Пользовательское исходящее подключение (%1)</translation>
     </message>
     <message>
         <source>Custom (%1 config)</source>
@@ -2586,7 +2586,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Custom (Xray outbound)</source>
-        <translation>Пользовательский (Xray outbound)</translation>
+        <translation>Пользовательское исходящее подключение Xray</translation>
     </message>
     <message>
         <source>Custom (Xray config)</source>
@@ -6187,7 +6187,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>A custom %1 config cannot be a hop; only custom outbounds can.</source>
-        <translation>Пользовательская конфигурация %1 не может быть звеном; звеньями могут быть только пользовательские outbound.</translation>
+        <translation>Пользовательская конфигурация %1 не может быть звеном цепочки; в качестве звеньев допускаются только пользовательские исходящие подключения.</translation>
     </message>
     <message>
         <source>Only one Extra Core profile can be in a chain.</source>
@@ -6254,15 +6254,15 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Outbound JSON, please read the documentation.</source>
-        <translation>Outbound JSON — пожалуйста, прочтите документацию.</translation>
+        <translation>JSON исходящего подключения. См. документацию.</translation>
     </message>
     <message>
         <source>Xray outbound JSON, please read the Xray documentation.</source>
-        <translation>Xray Outbound JSON — пожалуйста, прочтите документацию Xray.</translation>
+        <translation>JSON исходящего подключения Xray. См. документацию Xray.</translation>
     </message>
     <message>
         <source>Xray full config (Throne adds a socks inbound and uses sing-box for tun/routing).</source>
-        <translation>Полная конфигурация Xray (Throne добавляет socks inbound и использует sing-box для tun / маршрутизации).</translation>
+        <translation>Полная конфигурация Xray (Throne добавляет входящее соединение SOCKS и использует sing-box для TUN и маршрутизации).</translation>
     </message>
     <message>
         <source>Please fill the complete config.</source>
@@ -8407,7 +8407,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restrict this outbound to one network. Leave empty to carry both TCP and UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ограничить этот outbound одной сетью. Оставьте пустым, чтобы передавать и TCP, и UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ограничить это исходящее соединение одной сетью. Оставьте поле пустым, чтобы использовать и TCP, и UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Network</source>
@@ -9185,7 +9185,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Click an outbound or a direction in the legend to show it.</source>
-        <translation>Нажмите на outbound или направление в легенде, чтобы показать его.</translation>
+        <translation>Нажмите на исходящее соединение или направление в легенде, чтобы отобразить соответствующие данные.</translation>
     </message>
     <message>
         <source>Total</source>
@@ -9690,7 +9690,7 @@ URL: %2</translation>
     </message>
     <message>
         <source>Kill switch: not active</source>
-        <translation>Kill switch: не активен</translation>
+        <translation>Аварийная блокировка: не активна</translation>
     </message>
     <message>
         <source>Connect OK</source>
@@ -9826,19 +9826,19 @@ Download them now?</source>
     </message>
     <message>
         <source>[Kill switch] Not starting %1: the kill switch is not active.</source>
-        <translation>[Kill switch] %1 не запускается: kill switch не активен.</translation>
+        <translation>[Аварийная блокировка] Не запускаем %1: аварийная блокировка не активна.</translation>
     </message>
     <message>
         <source>[Kill switch] The extra core %1 could not be allowed through the kill switch.</source>
-        <translation>[Kill switch] Не удалось пропустить дополнительное ядро %1 через kill switch.</translation>
+        <translation>[Аварийная блокировка] Не удалось разрешить работу дополнительного ядра %1 при включённой аварийной блокировке.</translation>
     </message>
     <message>
         <source>Kill switch</source>
-        <translation>Блокировка трафика в обход Throne</translation>
+        <translation>Аварийная блокировка</translation>
     </message>
     <message>
         <source>The kill switch could not be updated to allow this profile&apos;s extra core, so the profile was not started. See the log for details.</source>
-        <translation>Не удалось обновить kill switch, чтобы пропустить дополнительное ядро этого профиля, поэтому профиль не запущен. Подробности в логе.</translation>
+        <translation>Не удалось обновить настройки аварийной блокировки, чтобы разрешить работу дополнительного ядра этого профиля; поэтому профиль не запущен. Подробности см. в журнале.</translation>
     </message>
     <message>
         <source>[Auto selector] Running the best %1 of %2 ranked profiles.</source>
@@ -10118,7 +10118,7 @@ Error: %1</source>
     </message>
     <message>
         <source>Kill switch is not active</source>
-        <translation>Kill switch не активен</translation>
+        <translation>Аварийная блокировка не активна</translation>
     </message>
     <message>
         <source>Restart as Administrator</source>
@@ -10134,19 +10134,19 @@ Error: %1</source>
     </message>
     <message>
         <source>Disable Kill Switch</source>
-        <translation>Отключить kill switch</translation>
+        <translation>Отключить аварийную блокировку</translation>
     </message>
     <message>
         <source>Disable kill switch</source>
-        <translation>Отключение kill switch</translation>
+        <translation>Отключение аварийной блокировки</translation>
     </message>
     <message>
         <source>Turn off the kill switch? Traffic that does not go through Throne will no longer be blocked.</source>
-        <translation>Отключить kill switch? Трафик, идущий не через Throne, больше не будет блокироваться.</translation>
+        <translation>Отключить аварийную блокировку? Трафик, идущий в обход Throne, больше не будет блокироваться.</translation>
     </message>
     <message>
         <source>[Kill switch] Restarting the core so that its own traffic passes the kill switch...</source>
-        <translation>[Kill switch] Перезапуск ядра, чтобы его собственный трафик проходил через kill switch...</translation>
+        <translation>[Аварийная блокировка] Перезапускаем ядро, чтобы его собственный трафик не блокировался...</translation>
     </message>
     <message>
         <source>The sing-box API is disabled. Set a listen port in Preferences &gt; Basic Settings &gt; Core.</source>
@@ -10650,7 +10650,7 @@ Name: %1</source>
     </message>
     <message>
         <source>Kill switch is blocking traffic</source>
-        <translation>Kill switch блокирует трафик</translation>
+        <translation>Аварийная блокировка блокирует трафик</translation>
     </message>
     <message>
         <source>Search Commands and Settings</source>
@@ -12191,7 +12191,7 @@ To fix this, share the hotspot from the throne-tun adapter instead of &quot;%1&q
     </message>
     <message>
         <source>Other outbounds</source>
-        <translation>Прочие outbound</translation>
+        <translation>Другие исходящие соединения</translation>
     </message>
     <message>
         <source>Download stalled: no data arrived for %1 seconds.</source>
@@ -12419,7 +12419,7 @@ To fix this, share the hotspot from the throne-tun adapter instead of &quot;%1&q
     </message>
     <message>
         <source>Request with proxy but the mixed inbound is disabled and Tun Mode is off.</source>
-        <translation>Запрос через прокси невозможен: mixed inbound отключён и режим TUN выключен.</translation>
+        <translation>Запрос через прокси невозможен: смешанное входящее соединение отключено, а режим TUN выключен.</translation>
     </message>
     <message>
         <source>Not an otpauth link or secret: %1</source>
@@ -12557,9 +12557,8 @@ To fix this, share the hotspot from the throne-tun adapter instead of &quot;%1&q
         <source>Use the route object exactly as written (outbound ids are still resolved to tags).
 Throne will NOT add its DNS-hijack or xray bridge plumbing, so DNS, chained/xray
 outbounds and other Throne features may break. For advanced users only.</source>
-        <translation>Использовать объект route точно в том виде, как он написан (ID outbound по-прежнему преобразуются в теги).
-Throne НЕ будет добавлять свой перехват DNS (DNS-hijack) и мост xray, поэтому DNS, цепочки/xray
-outbound и другие функции Throne могут не работать. Только для опытных пользователей.</translation>
+        <translation>Использовать объект route точно в том виде, как он записан (ID исходящих подключений по-прежнему преобразуются в теги).
+Throne НЕ будет добавлять собственный перехват DNS (DNS-hijack) и мост Xray, поэтому DNS, цепочки и исходящие подключения Xray, а также другие функции Throne могут не работать. Только для опытных пользователей.</translation>
     </message>
     <message>
         <source>Format JSON</source>
@@ -13063,7 +13062,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Default outbound</source>
-        <translation>Outbound по умолчанию</translation>
+        <translation>Исходящее подключение по умолчанию</translation>
     </message>
     <message>
         <source>%1 — %2 rule(s)</source>
@@ -13726,23 +13725,23 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Kill switch is blocking traffic</source>
-        <translation>Kill switch блокирует трафик</translation>
+        <translation>Аварийная блокировка блокирует трафик</translation>
     </message>
     <message>
         <source>Kill switch: starting…</source>
-        <translation>Kill switch: запускается…</translation>
+        <translation>Аварийная блокировка: запуск…</translation>
     </message>
     <message>
         <source>Kill switch: Tun is not running, so most traffic is blocked</source>
-        <translation>Kill switch: TUN не запущен, поэтому большая часть трафика блокируется</translation>
+        <translation>Аварийная блокировка: TUN не запущен, поэтому блокируется большая часть трафика</translation>
     </message>
     <message>
         <source>Kill switch: on — traffic only flows through Throne&apos;s Tun</source>
-        <translation>Kill switch: включен — трафик идет только через TUN Throne</translation>
+        <translation>Аварийная блокировка включена: трафик проходит только через TUN Throne</translation>
     </message>
     <message>
         <source>Kill switch is not active</source>
-        <translation>Kill switch не активен</translation>
+        <translation>Аварийная блокировка не активна</translation>
     </message>
 </context>
 <context>
@@ -13871,27 +13870,27 @@ Remove that endpoint from this routing profile as well?</source>
     <name>Sys::KillSwitch</name>
     <message>
         <source>The kill switch needs Throne to run as administrator.</source>
-        <translation>Для kill switch нужно запустить Throne от имени администратора.</translation>
+        <translation>Для работы аварийной блокировки Throne должен быть запущен от имени администратора.</translation>
     </message>
     <message>
         <source>The kill switch needs the core to have root privileges.</source>
-        <translation>Для kill switch ядру нужны права root.</translation>
+        <translation>Для работы аварийной блокировки ядру нужны права root.</translation>
     </message>
     <message>
         <source>The kill switch is not supported on this system.</source>
-        <translation>Kill switch не поддерживается в этой системе.</translation>
+        <translation>Аварийная блокировка не поддерживается в этой системе.</translation>
     </message>
     <message>
         <source>Another program removed the kill switch rules or disabled the system firewall.</source>
-        <translation>Другая программа удалила правила kill switch или отключила системный брандмауэр.</translation>
+        <translation>Другая программа удалила правила аварийной блокировки или отключила системный брандмауэр.</translation>
     </message>
     <message>
         <source>The kill switch rejected its settings.</source>
-        <translation>Kill switch не принял настройки.</translation>
+        <translation>Аварийная блокировка отклонила настройки.</translation>
     </message>
     <message>
         <source>The kill switch process stopped unexpectedly.</source>
-        <translation>Процесс kill switch неожиданно остановился.</translation>
+        <translation>Процесс аварийной блокировки неожиданно остановился.</translation>
     </message>
     <message>
         <source>Details: %1</source>
@@ -13899,27 +13898,27 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>[Kill switch] Off.</source>
-        <translation>[Kill switch] Выключен.</translation>
+        <translation>[Аварийная блокировка] Выключена.</translation>
     </message>
     <message>
         <source>[Kill switch] Allowing the extra core %1.</source>
-        <translation>[Kill switch] Разрешено дополнительное ядро %1.</translation>
+        <translation>[Аварийная блокировка] Разрешаем работу дополнительного ядра %1.</translation>
     </message>
     <message>
         <source>[Kill switch] Warning: %1</source>
-        <translation>[Kill switch] Предупреждение: %1</translation>
+        <translation>[Аварийная блокировка] Предупреждение: %1</translation>
     </message>
     <message>
         <source>[Kill switch] On: only traffic through Throne can leave this device.</source>
-        <translation>[Kill switch] Включен: покинуть это устройство может только трафик через Throne.</translation>
+        <translation>[Аварийная блокировка] Включена: устройство может отправлять только трафик через Throne.</translation>
     </message>
     <message>
         <source>[Kill switch] New settings applied.</source>
-        <translation>[Kill switch] Новые настройки применены.</translation>
+        <translation>[Аварийная блокировка] Новые настройки применены.</translation>
     </message>
     <message>
         <source>the kill switch did not respond within %1 seconds</source>
-        <translation>kill switch не ответил в течение %1 с</translation>
+        <translation>аварийная блокировка не ответила в течение %1 с</translation>
     </message>
     <message>
         <source>could not start %1: %2</source>
@@ -13927,35 +13926,35 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>the kill switch process crashed</source>
-        <translation>процесс kill switch аварийно завершился</translation>
+        <translation>процесс аварийной блокировки аварийно завершился</translation>
     </message>
     <message>
         <source>the kill switch process exited with code %1</source>
-        <translation>процесс kill switch завершился с кодом %1</translation>
+        <translation>процесс аварийной блокировки завершился с кодом %1</translation>
     </message>
     <message>
         <source>the kill switch process crashed before it was ready</source>
-        <translation>процесс kill switch аварийно завершился до готовности</translation>
+        <translation>процесс аварийной блокировки аварийно завершился до готовности</translation>
     </message>
     <message>
         <source>the kill switch process exited with code %1 before it was ready</source>
-        <translation>процесс kill switch завершился с кодом %1 до готовности</translation>
+        <translation>процесс аварийной блокировки завершился с кодом %1 до готовности</translation>
     </message>
     <message>
         <source>[Kill switch] The new settings could not be applied, the previous ones stay in force: %1</source>
-        <translation>[Kill switch] Не удалось применить новые настройки, продолжают действовать прежние: %1</translation>
+        <translation>[Аварийная блокировка] Не удалось применить новые настройки; продолжают действовать прежние: %1</translation>
     </message>
     <message>
         <source>[Kill switch] Protection lost: %1</source>
-        <translation>[Kill switch] Защита потеряна: %1</translation>
+        <translation>[Аварийная блокировка] Защита потеряна: %1</translation>
     </message>
     <message>
         <source>[Kill switch] Starting it again...</source>
-        <translation>[Kill switch] Повторный запуск...</translation>
+        <translation>[Аварийная блокировка] Повторный запуск...</translation>
     </message>
     <message>
         <source>[Kill switch] Not active: %1</source>
-        <translation>[Kill switch] Не активен: %1</translation>
+        <translation>[Аварийная блокировка] Не активна: %1</translation>
     </message>
 </context>
 <context>
@@ -14474,7 +14473,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Removed this inbound from the imported configuration: it could let other devices connect through this computer. Only tun inbounds and local proxies that listen on 127.0.0.1 or ::1 are kept.</source>
-        <translation>Этот inbound удален из импортированной конфигурации: он мог бы позволить другим устройствам подключаться через этот компьютер. Сохраняются только tun inbound и локальные прокси, слушающие 127.0.0.1 или ::1.</translation>
+        <translation>Это входящее соединение удалено из импортированной конфигурации: через него другие устройства могли бы подключаться через этот компьютер. Сохраняются только входящие подключения TUN и локальные прокси, прослушивающие 127.0.0.1 или ::1.</translation>
     </message>
     <message>
         <source>Removed the Clash API from the imported configuration: web pages and programs on this computer could use it to control the core, and its external_ui setting downloads files.</source>
@@ -14486,7 +14485,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Removed the inbounds from the imported configuration: Throne adds its own local inbound, and these could let other devices connect through this computer.</source>
-        <translation>Inbound удалены из импортированной конфигурации: Throne добавляет собственный локальный inbound, а эти могли бы позволить другим устройствам подключаться через этот компьютер.</translation>
+        <translation>Входящие соединения удалены из импортированной конфигурации: Throne добавляет собственное локальное входящее соединение, а удалённые подключения могли бы позволить другим устройствам подключаться через этот компьютер.</translation>
     </message>
     <message>
         <source>Removed the environment variables from the imported configuration: they would apply to Throne&apos;s core and to the programs it starts.</source>
@@ -14506,7 +14505,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Add the outbound type, for example &quot;type&quot;: &quot;socks&quot;.</source>
-        <translation>Добавьте тип outbound, например &quot;type&quot;: &quot;socks&quot;.</translation>
+        <translation>Добавьте тип исходящего соединения, например &quot;type&quot;: &quot;socks&quot;.</translation>
     </message>
     <message>
         <source>Add the protocol, for example &quot;protocol&quot;: &quot;vless&quot;.</source>
@@ -15262,19 +15261,19 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>sing-box outbound #%1</source>
-        <translation>Outbound sing-box #%1</translation>
+        <translation>Исходящее соединение sing-box №%1</translation>
     </message>
     <message>
         <source>sing-box outbound &quot;%1&quot;</source>
-        <translation>Outbound sing-box &quot;%1&quot;</translation>
+        <translation>Исходящее соединение sing-box «%1»</translation>
     </message>
     <message>
         <source>Xray outbound #%1</source>
-        <translation>Outbound Xray #%1</translation>
+        <translation>Исходящее соединение Xray №%1</translation>
     </message>
     <message>
         <source>Xray outbound &quot;%1&quot;</source>
-        <translation>Outbound Xray &quot;%1&quot;</translation>
+        <translation>Исходящее соединение Xray «%1»</translation>
     </message>
     <message>
         <source>Xray config #%1</source>
@@ -15310,7 +15309,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>A VLESS profile cannot store this setting, so it was ignored. Such an outbound is kept as written only when nothing else in it needs fixing.</source>
-        <translation>Профиль VLESS не может хранить этот параметр, поэтому он проигнорирован. Такой outbound сохраняется как есть, только если в нем больше нечего исправлять.</translation>
+        <translation>Профиль VLESS не может хранить этот параметр, поэтому он был проигнорирован. Такое исходящее подключение сохраняется без изменений, только если больше ничего в нём не нужно исправлять.</translation>
     </message>
     <message>
         <source>Rename this key to &quot;%1&quot;: Throne reads only that spelling, and dropping its value would weaken the connection&apos;s security.</source>
@@ -15342,7 +15341,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Imported as a custom Xray outbound to keep %1, which a VLESS profile would drop.</source>
-        <translation>Импортировано как пользовательский Xray outbound, чтобы сохранить %1 — в профиле VLESS это было бы отброшено.</translation>
+        <translation>Импортировано как пользовательское исходящее подключение Xray, чтобы сохранить %1 — профиль VLESS отбросил бы этот параметр.</translation>
     </message>
     <message>
         <source>SIP008 server #%1</source>
@@ -15454,7 +15453,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Rule &quot;%1&quot; now uses the proxy outbound: %2</source>
-        <translation>Правило &quot;%1&quot; теперь использует outbound proxy: %2</translation>
+        <translation>Правило «%1» теперь использует исходящее подключение «proxy»: %2</translation>
     </message>
     <message>
         <source>Rule &quot;%1&quot;: %2 was cleared: %3</source>
@@ -15462,7 +15461,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Rule &quot;%1&quot;: the outbound is neither a profile name nor an id, so it uses proxy.</source>
-        <translation>Правило &quot;%1&quot;: outbound не является ни именем, ни ID профиля, поэтому используется proxy.</translation>
+        <translation>Правило «%1»: значение исходящего подключения не совпадает ни с именем профиля, ни с его ID, поэтому будет использован прокси.</translation>
     </message>
     <message>
         <source>Rule &quot;%1&quot; was dropped: %2 holds something other than text, numbers or booleans.</source>
@@ -15490,7 +15489,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>The default outbound &quot;%1&quot; is unknown, so proxy is used.</source>
-        <translation>Outbound по умолчанию &quot;%1&quot; неизвестен, поэтому используется proxy.</translation>
+        <translation>Исходящее подключение по умолчанию «%1» неизвестно, поэтому будет использован прокси.</translation>
     </message>
     <message>
         <source>Rule #%1 is not a JSON object and was skipped.</source>
@@ -15554,23 +15553,23 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Not a valid outbound; pick another one.</source>
-        <translation>Недопустимый outbound; выберите другой.</translation>
+        <translation>Недопустимое исходящее подключение; выберите другое.</translation>
     </message>
     <message>
         <source>The outbound profile no longer exists; pick another one.</source>
-        <translation>Профиль outbound больше не существует; выберите другой.</translation>
+        <translation>Профиль исходящего подключения больше не существует; выберите другой.</translation>
     </message>
     <message>
         <source>Routing rules cannot use &quot;%1&quot;: extra core profiles and full configs are not supported. Pick another outbound.</source>
-        <translation>В правилах маршрутизации нельзя использовать &quot;%1&quot;: профили с дополнительным ядром и полные конфигурации не поддерживаются. Выберите другой outbound.</translation>
+        <translation>В правилах маршрутизации нельзя использовать «%1»: профили с дополнительным ядром и полные конфигурации не поддерживаются. Выберите другое исходящее подключение.</translation>
     </message>
     <message>
         <source>The chain &quot;%1&quot; has no hops; pick another outbound.</source>
-        <translation>В цепочке &quot;%1&quot; нет звеньев; выберите другой outbound.</translation>
+        <translation>В цепочке «%1» нет звеньев; выберите другое исходящее подключение.</translation>
     </message>
     <message>
         <source>Routing rules cannot use the chain &quot;%1&quot;: a hop of it is missing, another chain, an extra core profile or a full config. Pick another outbound.</source>
-        <translation>В правилах маршрутизации нельзя использовать цепочку &quot;%1&quot;: одно из ее звеньев отсутствует, является другой цепочкой, профилем с дополнительным ядром или полной конфигурацией. Выберите другой outbound.</translation>
+        <translation>В правилах маршрутизации нельзя использовать цепочку «%1»: одно из её звеньев отсутствует, является другой цепочкой, профилем с дополнительным ядром или полной конфигурацией. Выберите другое исходящее подключение.</translation>
     </message>
     <message>
         <source>A range goes in port_range, written like 1000:2000.</source>
