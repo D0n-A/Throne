@@ -99,7 +99,7 @@ Total speed: %8/s↑ %9/s↓</source>
 Подключения: %2
 Процесс: %3
 Протокол: %4
-Outbound: %5
+Исходящее подключение: %5
 Общий трафик: %6↑ %7↓
 Общая скорость: %8/s↑ %9/s↓</translation>
     </message>
@@ -111,7 +111,7 @@ Outbound: %4</source>
         <translation>Пункт назначения: %1
 Процесс: %2
 Протокол: %3
-Outbound: %4</translation>
+Исходящее подключение: %4</translation>
     </message>
     <message>
         <source>Process / Destination</source>
@@ -7097,7 +7097,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Client version reported separately from the user agent. Currently used by AnyConnect XML authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Версия клиента, сообщаемая отдельно от user agent. Сейчас используется при XML-аутентификации AnyConnect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Версия клиента, сообщаемая отдельно от User-Agent. Сейчас используется при XML-аутентификации AnyConnect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Version</source>
