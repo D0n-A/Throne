@@ -2306,7 +2306,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>TLS Tricks</source>
-        <translation>TLS Tricks</translation>
+        <translation>Изменение регистра SNI</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mixed-case SNI to evade exact-match SNI filtering. The &amp;quot;Keep Default&amp;quot; behaviour is configured in Settings &gt; Core.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -4421,7 +4421,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>JSON (*.json)</source>
-        <translation>JSON (*.json)</translation>
+        <translation>Файлы JSON (*.json)</translation>
     </message>
     <message>
         <source>Cannot write to: %1</source>
@@ -4494,7 +4494,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>TLS Tricks</source>
-        <translation>TLS Tricks</translation>
+        <translation>Изменение регистра SNI</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable mixed-case SNI for profiles whose TLS Tricks setting is left on &amp;quot;Keep Default&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8473,7 +8473,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Auth key</source>
-        <translation>Auth Key</translation>
+        <translation>Ключ аутентификации</translation>
     </message>
     <message>
         <source>Control URL</source>
