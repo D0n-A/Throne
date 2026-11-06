@@ -62,6 +62,7 @@ namespace Configs {
             constexpr auto dnsEchPrefix = "dns-ech";
 
             constexpr auto dnsIn = "dns-in";
+            constexpr auto dnsSystem = "dns-system";
             constexpr auto mixedIn = "mixed-in";
             constexpr auto tunIn = "tun-in";
             constexpr auto xrayFullConfigIn = "throne-bridge";
@@ -234,6 +235,11 @@ namespace Configs {
 #else
             return ctx.tunEnabled && !ctx.forTest && dataManager->settingsRepo->vpn_l3_bridge;
 #endif
+        }
+
+        // The core points macOS's system resolver at this lo0 alias and moves the inbound behind a pf redirect from :53 (#2061).
+        bool systemDnsInbound(const BuildContext &ctx) {
+            return ctx.os == Darwin && ctx.tunEnabled && !ctx.forTest;
         }
 
         // preferred_by matches only during pre-match, leaving the copy inert at L4.
@@ -738,17 +744,7 @@ namespace Configs {
             // A verbatim raw profile takes no twins, and an unreachable bridge still starts a tun.
             ctx.l3Bridge = l3BridgeEnabled(ctx) && !(routeChain->isRaw && routeChain->preventModifications);
 
-            const bool warpMissing = settings.warp_mode == "masque"
-                ? settings.warp_masque_private_key.isEmpty() ||
-                  settings.warp_masque_peer_public_key.isEmpty() ||
-                  settings.warp_masque_ep.isEmpty() ||
-                  settings.warp_masque_ifc_addrs.isEmpty()
-                : settings.warp_private_key.isEmpty() ||
-                  settings.warp_public_key.isEmpty() ||
-                  settings.warp_ep.isEmpty() ||
-                  settings.warp_ifc_addrs.isEmpty() ||
-                  (settings.warp_mode == "amnezia" && settings.warp_amnezia_packets.isEmpty());
-            if (settings.enable_warp && warpMissing) {
+            if (settings.enable_warp && !WarpConfigured(settings.warp_mode)) {
                 ctx.error = "Warp is enabled but its config has not been generated. Please generate the Warp config first in Routing Settings.";
                 return;
             }
@@ -1039,6 +1035,10 @@ namespace Configs {
             if (parsed.type == "local") {
                 // The kill switch drops resolved's own upstream queries; a probe box outlives Tun toggles, and its `local` would follow resolved's `~.` into a running tun (#1975).
                 if (ctx.isResolvedUsed && (ctx.tunEnabled || ctx.forTest || dataManager->settingsRepo->kill_switch)) {
+                    return {{"type", "underlying"}};
+                }
+                // A macOS Tun points the system resolver at its dns-system inbound, which `local` would query and loop through (#2045).
+                if (ctx.os == Darwin && (ctx.tunEnabled || ctx.forTest)) {
                     return {{"type", "underlying"}};
                 }
                 return {{"type", "local"}};
@@ -1402,6 +1402,15 @@ namespace Configs {
                 {"listen", settings.core_dns_in_lan ? "::" : "127.0.0.1"},
                 {"listen_port", settings.core_dns_in_port}
             });
+            if (systemDnsInbound(ctx)) {
+                inbounds.prepend(QJsonObject{
+                    {"tag", tags::dnsSystem},
+                    {"type", "direct"},
+                    {"listen", "127.0.0.53"},
+                    {"listen_port", 53},
+                    {"reuse_addr", true},
+                });
+            }
 
             QJSONARRAY_ADD(inbounds, QString2QJsonObject(settings.custom_inbound)["inbounds"].toArray())
             ctx.result->coreConfig["inbounds"] = inbounds;
@@ -2307,7 +2316,15 @@ namespace Configs {
                 QJsonObject resolve;
                 QJsonObject dnsHijack;
                 QJsonObject dnsInReject;
+                QJsonObject dnsSystem;
             } injected;
+
+            if (systemDnsInbound(ctx)) {
+                injected.dnsSystem = QJsonObject{
+                    {"inbound", tags::dnsSystem},
+                    {"action", "hijack-dns"},
+                };
+            }
 
             if (!routeChain->isRaw) {
                 injected.sniff = QJsonObject{{"action", "sniff"}};
@@ -2417,6 +2434,7 @@ namespace Configs {
             for (const auto& r : bridgeRules) routeRules.append(r);
             if (!extraCoreDirect.isEmpty()) routeRules.append(extraCoreDirect);
             auto appendIfSet = [&routeRules](const QJsonObject& r) { if (!r.isEmpty()) routeRules.append(r); };
+            appendIfSet(injected.dnsSystem);
             appendIfSet(injected.sniff);
             appendIfSet(injected.resolve);
             appendIfSet(injected.dnsHijack);
@@ -3484,5 +3502,21 @@ namespace Configs {
     void SplitWarpEndpoint(const QString &endpoint, int defaultPort, QString &host, int &port)
     {
         splitWarpEndpoint(endpoint, defaultPort, host, port);
+    }
+
+    bool WarpConfigured(const QString &mode)
+    {
+        const auto &settings = *dataManager->settingsRepo;
+        if (mode == "masque") {
+            return !settings.warp_masque_private_key.isEmpty() &&
+                   !settings.warp_masque_peer_public_key.isEmpty() &&
+                   !settings.warp_masque_ep.isEmpty() &&
+                   !settings.warp_masque_ifc_addrs.isEmpty();
+        }
+        return !settings.warp_private_key.isEmpty() &&
+               !settings.warp_public_key.isEmpty() &&
+               !settings.warp_ep.isEmpty() &&
+               !settings.warp_ifc_addrs.isEmpty() &&
+               !(mode == "amnezia" && settings.warp_amnezia_packets.isEmpty());
     }
 }
