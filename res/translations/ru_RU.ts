@@ -174,7 +174,7 @@ Outbound: %4</translation>
     </message>
     <message>
         <source>Lock contention</source>
-        <translation>Конфликт блокировок (Lock contention)</translation>
+        <translation>Конкуренция за блокировки</translation>
     </message>
     <message>
         <source>Execution trace (larger file)</source>
@@ -515,7 +515,7 @@ It stays a preference, not a lock: if that profile stops working the selector st
     </message>
     <message>
         <source>User Agent</source>
-        <translation>User Agent</translation>
+        <translation>User-Agent</translation>
     </message>
     <message>
         <source>Use proxy</source>
@@ -733,7 +733,7 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Direct Test URL</source>
-        <translation>URL проверки Direct</translation>
+        <translation>URL для проверки без прокси</translation>
     </message>
     <message>
         <source>optional — use the OS network state</source>
@@ -949,7 +949,7 @@ The local network stays reachable unless Private Range Bypass is turned off in T
     </message>
     <message>
         <source>Regenerate Secret</source>
-        <translation>Сгенерировать Secret</translation>
+        <translation>Сгенерировать новый секрет</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
@@ -1671,11 +1671,11 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Empty uses the User Agent from the Subscription settings.</source>
-        <translation>Если пусто, используется User Agent из настроек (вкладка «Подписка»).</translation>
+        <translation>Если поле пустое, используется User-Agent из настроек подписки.</translation>
     </message>
     <message>
         <source>User Agent</source>
-        <translation>User Agent</translation>
+        <translation>User-Agent</translation>
     </message>
     <message>
         <source>TLS versions offered when fetching this subscription. Some servers answer the default handshake with a CAPTCHA or a block page; TLS 1.2 often gets through. Keep Default follows the Subscription settings.</source>
@@ -2087,11 +2087,11 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Base32 secret</source>
-        <translation>Secret в формате Base32</translation>
+        <translation>Секрет в формате Base32</translation>
     </message>
     <message>
         <source>Show secret</source>
-        <translation>Показать Secret</translation>
+        <translation>Показать секрет</translation>
     </message>
     <message>
         <source>Issuer</source>
@@ -2143,7 +2143,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Hide secret</source>
-        <translation>Скрыть Secret</translation>
+        <translation>Скрыть секрет</translation>
     </message>
     <message>
         <source>Not valid base32: use the letters A-Z and the digits 2-7.</source>
@@ -2159,11 +2159,11 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Secret is empty</source>
-        <translation>Secret не указан</translation>
+        <translation>Секрет не указан</translation>
     </message>
     <message>
         <source>Secret is not valid base32</source>
-        <translation>Secret не является корректной строкой Base32</translation>
+        <translation>Секрет не является корректной строкой Base32</translation>
     </message>
     <message>
         <source>No code yet</source>
@@ -2386,7 +2386,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Multi Mode</source>
-        <translation>Multi Mode</translation>
+        <translation>Режим Multi</translation>
     </message>
     <message>
         <source>xPaddingObfsMode</source>
@@ -2410,7 +2410,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Upload / Stream Tuning</source>
-        <translation>Настройка upload / stream</translation>
+        <translation>Настройки отправки данных и потоковой передачи</translation>
     </message>
     <message>
         <source>scMaxEachPostBytes</source>
@@ -2650,7 +2650,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Fallback Delay</source>
-        <translation>Fallback Delay</translation>
+        <translation>Резервная задержка фрагментации</translation>
     </message>
     <message>
         <source>Enable TLS Record Fragment</source>
@@ -3012,7 +3012,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>The Google Drive OAuth client secret.</source>
-        <translation>OAuth client secret для Google Drive.</translation>
+        <translation>Секрет клиента OAuth для Google Drive.</translation>
     </message>
     <message>
         <source>The OAuth refresh token for the Google account that owns the folder.</source>
@@ -3040,7 +3040,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>The S3 secret access key.</source>
-        <translation>Secret access key для S3.</translation>
+        <translation>Секретный ключ доступа S3.</translation>
     </message>
     <message>
         <source>Optional: the session token of temporary credentials.</source>
@@ -3631,7 +3631,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Reserved</source>
-        <translation>Reserved</translation>
+        <translation>Резервные байты</translation>
     </message>
     <message>
         <source>Interface Addresses</source>
@@ -4285,7 +4285,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>No usable code; check the secret.</source>
-        <translation>Не удалось получить код; проверьте Secret.</translation>
+        <translation>Не удалось получить код; проверьте секрет.</translation>
     </message>
     <message>
         <source>Copied</source>
@@ -4297,7 +4297,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>Delete &quot;%1&quot;? Its secret cannot be recovered.</source>
-        <translation>Удалить &quot;%1&quot;? Его Secret будет невозможно восстановить.</translation>
+        <translation>Удалить «%1»? Его секрет нельзя будет восстановить.</translation>
     </message>
     <message>
         <source>Failed to store the OTP profile.</source>
@@ -4345,7 +4345,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>Paste otpauth:// links, an otpauth-migration:// link, a JSON export, or just a base32 secret.</source>
-        <translation>Вставьте ссылки otpauth://, ссылку otpauth-migration://, экспорт в JSON или просто Secret в формате Base32.</translation>
+        <translation>Вставьте ссылки otpauth://, ссылку otpauth-migration://, экспорт в JSON или просто секрет в формате Base32.</translation>
     </message>
     <message>
         <source>From clipboard</source>
@@ -4574,7 +4574,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>Disable Path MTU Discovery</source>
-        <translation>Отключить Path MTU Discovery</translation>
+        <translation>Отключить определение MTU пути</translation>
     </message>
 </context>
 <context>
@@ -5686,7 +5686,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>ECH Query Name / Resolver</source>
-        <translation>ECH Query Name / Resolver</translation>
+        <translation>Домен для запроса ECH / DNS-резолвер</translation>
     </message>
     <message>
         <source>domain or domain+resolver</source>
@@ -5758,7 +5758,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>Disable Path MTU Discovery</source>
-        <translation>Отключить Path MTU Discovery</translation>
+        <translation>Отключить определение MTU пути</translation>
     </message>
     <message>
         <source>Disable SNI</source>
@@ -6076,11 +6076,11 @@ Close without saving?</source>
     </message>
     <message>
         <source>optional — inherits the Direct Test URL</source>
-        <translation>необязательно — наследует «URL проверки Direct»</translation>
+        <translation>необязательно — наследует «URL для проверки без прокси»</translation>
     </message>
     <message>
         <source>Fetched WITHOUT the proxy to tell a dead internet connection apart from dead servers, and to notice the moment it comes back. Leave empty to inherit the Direct Test URL from Basic Settings, and empty there too to rely on the operating system&apos;s network state. A URL that turns out to be blocked can only delay a resume by a few minutes; it can never keep the selector paused.</source>
-        <translation>Запрашивается БЕЗ прокси, чтобы отличить отсутствие интернета от неработающих серверов и сразу заметить, когда связь вернется. Оставьте пустым, чтобы использовать «URL проверки Direct» из основных настроек; если пусто и там, используется состояние сети операционной системы. Если этот URL окажется заблокирован, это лишь задержит возобновление на несколько минут, но никогда не оставит автовыбор на паузе.</translation>
+        <translation>Запрашивается БЕЗ прокси, чтобы отличить отсутствие интернета от неработающих серверов и сразу заметить, когда связь вернется. Оставьте пустым, чтобы использовать «URL для проверки без прокси» из основных настроек; если пусто и там, используется состояние сети операционной системы. Если этот URL окажется заблокирован, это лишь задержит возобновление на несколько минут, но никогда не оставит автовыбор на паузе.</translation>
     </message>
     <message>
         <source>Rotate on a timer (keeps sessions stable)</source>
@@ -6360,7 +6360,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Private Key Path</source>
-        <translation>Путь к Private Key</translation>
+        <translation>Путь к закрытому ключу</translation>
     </message>
     <message>
         <source>Choose File</source>
@@ -6368,7 +6368,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Private Key Password</source>
-        <translation>Пароль к Private Key</translation>
+        <translation>Пароль закрытого ключа</translation>
     </message>
     <message>
         <source>Host Keys</source>
@@ -6899,7 +6899,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Insecure Concurrency</source>
-        <translation>Insecure Concurrency</translation>
+        <translation>Число параллельных туннельных подключений</translation>
     </message>
     <message>
         <source>Parallel tunnel connections to the server, 0 to disable. More connections are easier to detect.</source>
@@ -7089,11 +7089,11 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User agent reported to the server. The default is flavor specific.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User agent, сообщаемый серверу. Значение по умолчанию зависит от протокола.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-Agent, передаваемый серверу. Значение по умолчанию зависит от варианта протокола.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>User Agent</source>
-        <translation>User Agent</translation>
+        <translation>User-Agent</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Client version reported separately from the user agent. Currently used by AnyConnect XML authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -7133,7 +7133,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A Base32 secret, a base32: prefixed secret or an otpauth:// URI for totp and hotp; the encoded CTF content for stoken; the access token for oidc. Conflicts with the secret path.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Secret в формате Base32, Secret с префиксом base32: или URI otpauth:// для totp и hotp; закодированное содержимое CTF для stoken; токен доступа для oidc. Несовместимо с полем «Путь к Secret».&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Секрет в формате Base32, секрет с префиксом base32: или URI otpauth:// для totp и hotp; закодированное содержимое CTF для stoken; токен доступа для oidc. Несовместимо с полем «Путь к секрету».&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Secret</source>
@@ -7141,11 +7141,11 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Path to the token secret or access token. Conflicts with the inline secret.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Путь к Secret токена или к токену доступа. Несовместимо с полем «Secret».&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Путь к секрету токена или токену доступа. Несовместимо с полем «Секрет».&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Secret Path</source>
-        <translation>Путь к Secret</translation>
+        <translation>Путь к секрету</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;RSA SecurID PIN for stoken mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -7353,7 +7353,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User agent used by the built-in TNCC handler. Neoteris HC Http is used by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User agent встроенного обработчика TNCC. По умолчанию используется Neoteris HC Http.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User-Agent встроенного обработчика TNCC. По умолчанию используется Neoteris HC Http.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reports the platform, hostname and observed MAC addresses. Required before machine certificates are used.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8330,7 +8330,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Private Key Password</source>
-        <translation>Пароль к Private Key</translation>
+        <translation>Пароль закрытого ключа</translation>
     </message>
     <message>
         <source>Host Key</source>
@@ -8346,7 +8346,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Private Key Path</source>
-        <translation>Путь к Private Key</translation>
+        <translation>Путь к закрытому ключу</translation>
     </message>
     <message>
         <source>Choose File</source>
@@ -8643,7 +8643,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     <name>EditWireguard</name>
     <message>
         <source>Reserved</source>
-        <translation>Reserved</translation>
+        <translation>Резервные байты</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;persistent_keepalive_interval in seconds, or an AmneziaWG range such as 22-30&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -11013,7 +11013,7 @@ How to update?</source>
     </message>
     <message>
         <source>The server returned a web page instead of a subscription. If it is a CAPTCHA or a bot check, try another TLS version, HTTP version or User Agent in the group&apos;s Advanced settings.</source>
-        <translation>Сервер вернул веб-страницу вместо подписки. Если это CAPTCHA или проверка на бота, попробуйте другую версию TLS, версию HTTP или User Agent в окне «Доп. настройки группы».</translation>
+        <translation>Сервер вернул веб-страницу вместо подписки. Если это CAPTCHA или проверка на бота, попробуйте другую версию TLS, версию HTTP или User-Agent в окне «Доп. настройки группы».</translation>
     </message>
     <message>
         <source>Announcement from %1: %2</source>
@@ -11979,15 +11979,15 @@ To fix this, share the hotspot from the throne-tun adapter instead of &quot;%1&q
     </message>
     <message>
         <source>Secret is empty</source>
-        <translation>Secret не указан</translation>
+        <translation>Секрет не указан</translation>
     </message>
     <message>
         <source>Secret is not valid base32</source>
-        <translation>Secret не является корректной строкой Base32</translation>
+        <translation>Секрет не является корректной строкой Base32</translation>
     </message>
     <message>
         <source>Secret is too short</source>
-        <translation>Secret слишком короткий</translation>
+        <translation>Секрет слишком короткий</translation>
     </message>
     <message>
         <source>Digits must be between %1 and %2</source>
@@ -12119,7 +12119,7 @@ To fix this, share the hotspot from the throne-tun adapter instead of &quot;%1&q
     </message>
     <message>
         <source>%1: the private key is empty</source>
-        <translation>%1: не указан Private Key</translation>
+        <translation>%1: не указан закрытый ключ</translation>
     </message>
     <message>
         <source>%1: no address is set</source>
@@ -13984,7 +13984,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Invalid secret</source>
-        <translation>Неверный Secret</translation>
+        <translation>Недопустимый секрет</translation>
     </message>
     <message>
         <source>Copied</source>
@@ -14677,11 +14677,11 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Set the token secret either directly or as a file, not both.</source>
-        <translation>Укажите Secret токена либо напрямую, либо файлом, но не обоими способами.</translation>
+        <translation>Укажите секрет токена либо непосредственно, либо в виде файла, но не обоими способами.</translation>
     </message>
     <message>
         <source>The software token needs its secret, directly or as a file.</source>
-        <translation>Для программного токена нужен Secret — напрямую или файлом.</translation>
+        <translation>Для программного токена нужен секрет — непосредственно или в виде файла.</translation>
     </message>
     <message>
         <source>Without a token mode these settings are not used or saved; pick a mode or clear them.</source>
@@ -15189,7 +15189,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>The group %1 was created, but its first download failed. Update it to try again; if the download keeps failing, try another TLS version, HTTP version or User Agent in the group&apos;s Advanced settings.</source>
-        <translation>Группа %1 создана, но первая загрузка не удалась. Обновите группу, чтобы повторить попытку; если загрузка по-прежнему не удается, попробуйте другую версию TLS, версию HTTP или User Agent в доп. настройках группы.</translation>
+        <translation>Группа %1 создана, но первая загрузка не удалась. Обновите группу, чтобы повторить попытку; если загрузка по-прежнему не удаётся, попробуйте другую версию TLS, версию HTTP или User-Agent в дополнительных настройках группы.</translation>
     </message>
     <message>
         <source>Problems:</source>
@@ -15945,7 +15945,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>Google Drive needs the client ID, client secret and refresh token.</source>
-        <translation>Для Google Drive нужны client ID, client secret и refresh token.</translation>
+        <translation>Для Google Drive нужны ID клиента, секрет клиента и токен обновления.</translation>
     </message>
     <message>
         <source>The template service needs a template describing the storage API.</source>
@@ -15961,7 +15961,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>S3 needs the access key ID and the secret access key; the session token is optional.</source>
-        <translation>Для S3 нужны access key ID и secret access key; session token необязателен.</translation>
+        <translation>Для S3 нужны ID ключа доступа и секретный ключ доступа; токен сессии необязателен.</translation>
     </message>
     <message>
         <source>The S3 keys cannot contain control characters.</source>
