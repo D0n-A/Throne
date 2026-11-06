@@ -4809,7 +4809,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>uTLS fingerprint</source>
-        <translation>uTLS fingerprint</translation>
+        <translation>Отпечаток uTLS</translation>
     </message>
     <message>
         <source>Allow insecure certificates</source>
@@ -5570,7 +5570,7 @@ Close without saving?</source>
     </message>
     <message>
         <source>TCP MultiPath</source>
-        <translation>TCP MultiPath</translation>
+        <translation>Многопутевой TCP</translation>
     </message>
     <message>
         <source>Reuse Address</source>
@@ -5825,11 +5825,11 @@ Close without saving?</source>
     </message>
     <message>
         <source>Idle Session Check Interval</source>
-        <translation>Idle Session Check Interval</translation>
+        <translation>Интервал проверки неактивной сессии</translation>
     </message>
     <message>
         <source>Idle Session Timeout</source>
-        <translation>Idle Session Timeout</translation>
+        <translation>Тайм-аут неактивной сессии</translation>
     </message>
     <message>
         <source>Min Idle Session</source>
@@ -6344,7 +6344,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>UDP over TCP</source>
-        <translation>UDP over TCP</translation>
+        <translation>UDP поверх TCP</translation>
     </message>
     <message>
         <source>Encryption</source>
@@ -6372,7 +6372,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Host Keys</source>
-        <translation>Host Keys</translation>
+        <translation>Ключи хоста</translation>
     </message>
     <message>
         <source>One per line</source>
@@ -6380,7 +6380,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Host Key Algorithms</source>
-        <translation>Host Key Algorithms</translation>
+        <translation>Алгоритмы ключей хоста</translation>
     </message>
     <message>
         <source>Client Version</source>
@@ -6875,7 +6875,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>UDP over TCP</source>
-        <translation>UDP over TCP</translation>
+        <translation>UDP поверх TCP</translation>
     </message>
     <message>
         <source>Username</source>
@@ -8047,7 +8047,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>MSS Fix</source>
-        <translation>MSS Fix</translation>
+        <translation>Коррекция MSS</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disables MSS clamping including the default clamp. Conflicts with MSS Fix and MSS Fix Mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8338,7 +8338,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Host Key Algorithms</source>
-        <translation>Host Key Algorithms</translation>
+        <translation>Алгоритмы ключей хоста</translation>
     </message>
     <message>
         <source>Client Version</source>
@@ -8369,7 +8369,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>UDP over TCP</source>
-        <translation>UDP over TCP</translation>
+        <translation>UDP поверх TCP</translation>
     </message>
     <message>
         <source>Plugin Args</source>
@@ -8477,7 +8477,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Control URL</source>
-        <translation>Control URL</translation>
+        <translation>URL сервера управления</translation>
     </message>
     <message>
         <source>Hostname</source>
@@ -8582,7 +8582,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>UDP Relay Mode</source>
-        <translation>UDP Relay Mode</translation>
+        <translation>Режим ретрансляции UDP</translation>
     </message>
     <message>
         <source>Password</source>
@@ -8590,7 +8590,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Zero RTT Handshake</source>
-        <translation>Zero RTT Handshake</translation>
+        <translation>Рукопожатие 0-RTT</translation>
     </message>
     <message>
         <source>UUID</source>
