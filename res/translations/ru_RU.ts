@@ -2266,7 +2266,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Finalmask</source>
-        <translation>Finalmask</translation>
+        <translation>FinalMask</translation>
     </message>
     <message>
         <source>Network Settings (%1)</source>
@@ -2370,7 +2370,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Reality SpiderX</source>
-        <translation>Reality SpiderX</translation>
+        <translation>Путь и параметры SpiderX REALITY</translation>
     </message>
     <message>
         <source>Network Settings</source>
@@ -2382,7 +2382,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>EarlyData Length</source>
-        <translation>EarlyData Length</translation>
+        <translation>Макс. размер ранних данных (байт)</translation>
     </message>
     <message>
         <source>Multi Mode</source>
@@ -2574,7 +2574,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Reality public key. If not empty, turn TLS into REALITY.</source>
-        <translation>Публичный ключ Reality. Если задан, вместо TLS используется REALITY.</translation>
+        <translation>Публичный ключ REALITY. Если задан, вместо TLS используется REALITY.</translation>
     </message>
     <message>
         <source>Custom (%1 outbound)</source>
@@ -2638,7 +2638,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Reality SID</source>
-        <translation>Reality SID</translation>
+        <translation>Короткий ID REALITY</translation>
     </message>
     <message>
         <source>Extra Core</source>
@@ -2658,7 +2658,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Reality short id. Accept only one value.</source>
-        <translation>Reality short id. Принимает только одно значение.</translation>
+        <translation>Короткий ID REALITY. Допускается только одно значение.</translation>
     </message>
     <message>
         <source>JSON: %1
@@ -2880,7 +2880,7 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>The short ID has no effect without a Reality public key, so Reality stays off.</source>
-        <translation>Short ID не действует без публичного ключа Reality, поэтому Reality остается выключенным.</translation>
+        <translation>Короткий ID не действует без публичного ключа REALITY, поэтому REALITY остаётся выключенным.</translation>
     </message>
     <message>
         <source>Storage</source>
@@ -14214,7 +14214,7 @@ Remove that endpoint from this routing profile as well?</source>
     </message>
     <message>
         <source>The REALITY short ID is invalid: it must be at most 16 hexadecimal characters, an even number of them.</source>
-        <translation>Недопустимый short ID REALITY: он должен содержать не более 16 шестнадцатеричных символов, причем их количество должно быть четным.</translation>
+        <translation>Короткий ID REALITY недопустим: он должен содержать не более 16 шестнадцатеричных символов, причём их количество должно быть чётным.</translation>
     </message>
     <message>
         <source>The headers must alternate names and values separated by |, for example User-Agent|curl, so they were ignored.</source>
