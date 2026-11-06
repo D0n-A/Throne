@@ -123,7 +123,7 @@ Outbound: %4</translation>
     </message>
     <message>
         <source>Outbound</source>
-        <translation>Outbound</translation>
+        <translation>Исходящее подключение</translation>
     </message>
     <message>
         <source>Traffic</source>
@@ -147,7 +147,7 @@ Outbound: %4</translation>
     </message>
     <message>
         <source>Click To Sort By Outbound</source>
-        <translation>Нажмите для сортировки по Outbound</translation>
+        <translation>Нажмите, чтобы отсортировать по исходящему подключению</translation>
     </message>
     <message>
         <source>Click to sort by traffic; right-click to choose total/down/up</source>
