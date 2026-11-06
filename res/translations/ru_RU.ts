@@ -3623,11 +3623,11 @@ Throne will restart to complete the restore.</source>
     </message>
     <message>
         <source>Private Key</source>
-        <translation>Private Key</translation>
+        <translation>Закрытый ключ</translation>
     </message>
     <message>
         <source>Public Key</source>
-        <translation>Public Key</translation>
+        <translation>Публичный ключ</translation>
     </message>
     <message>
         <source>Reserved</source>
@@ -6296,7 +6296,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Public Key</source>
-        <translation>Public Key</translation>
+        <translation>Публичный ключ</translation>
     </message>
     <message>
         <source>Record Type</source>
@@ -6356,7 +6356,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Private Key</source>
-        <translation>Private Key</translation>
+        <translation>Закрытый ключ</translation>
     </message>
     <message>
         <source>Private Key Path</source>
@@ -6396,7 +6396,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Keepalive Interval</source>
-        <translation>Keepalive Interval</translation>
+        <translation>Интервал поддержания активности</translation>
     </message>
     <message>
         <source>Queries per Second</source>
@@ -6493,7 +6493,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Down Mbps</source>
-        <translation>Down Mbps</translation>
+        <translation>Скорость загрузки (Мбит/с)</translation>
     </message>
     <message>
         <source>Recv window conn</source>
@@ -6513,7 +6513,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Up Mbps</source>
-        <translation>Up Mbps</translation>
+        <translation>Скорость отдачи (Мбит/с)</translation>
     </message>
     <message>
         <source>Hop Interval Max</source>
@@ -6525,7 +6525,7 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>BBR Profile</source>
-        <translation>BBR Profile</translation>
+        <translation>Профиль BBR</translation>
     </message>
     <message>
         <source>Congestion control aggressiveness. Leave empty to use the default (standard).</source>
@@ -6537,11 +6537,11 @@ Leave some out: ^(?!.*(germany|🇩🇪)).*$ uses every name that contains neith
     </message>
     <message>
         <source>Obfuscation</source>
-        <translation>Obfuscation</translation>
+        <translation>Обфускация</translation>
     </message>
     <message>
         <source>Obfuscation Password</source>
-        <translation>Obfuscation Password</translation>
+        <translation>Пароль обфускации</translation>
     </message>
     <message>
         <source>Minimum Packet Size</source>
@@ -6674,7 +6674,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Private Key</source>
-        <translation>Private Key</translation>
+        <translation>Закрытый ключ</translation>
     </message>
     <message>
         <source>Base64 DER of the server&apos;s public key. When set, it pins the server certificate, even with Allow insecure.</source>
@@ -6860,7 +6860,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Traffic Pattern</source>
-        <translation>Traffic Pattern</translation>
+        <translation>Шаблон трафика</translation>
     </message>
     <message>
         <source>Server Ports</source>
@@ -6883,7 +6883,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Congestion Control</source>
-        <translation>Congestion Control</translation>
+        <translation>Управление перегрузкой</translation>
     </message>
     <message>
         <source>QUIC</source>
@@ -6998,7 +6998,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Server Name</source>
-        <translation>Server Name</translation>
+        <translation>Имя сервера</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Additional trusted CA certificate content in PEM format, added to the system certificate pool.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -7879,7 +7879,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Server Name</source>
-        <translation>Server Name</translation>
+        <translation>Имя сервера</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certificate field matched by the server name. name is used by default and matches the common name exactly.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -7887,7 +7887,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Server Name Type</source>
-        <translation>Server Name Type</translation>
+        <translation>Тип имени сервера</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Conflicts with the inline CA certificate on the main editor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -8326,7 +8326,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Private Key</source>
-        <translation>Private Key</translation>
+        <translation>Закрытый ключ</translation>
     </message>
     <message>
         <source>Private Key Password</source>
@@ -8415,7 +8415,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Obfuscation</source>
-        <translation>Obfuscation</translation>
+        <translation>Обфускация</translation>
     </message>
     <message>
         <source>Obfuscation Host</source>
@@ -8567,7 +8567,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Congestion Control</source>
-        <translation>Congestion Control</translation>
+        <translation>Управление перегрузкой</translation>
     </message>
     <message>
         <source>QUIC</source>
@@ -8598,7 +8598,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Congestion Control</source>
-        <translation>Congestion Control</translation>
+        <translation>Управление перегрузкой</translation>
     </message>
     <message>
         <source>UDP over Stream</source>
@@ -8621,7 +8621,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Packet Encoding</source>
-        <translation>Packet Encoding</translation>
+        <translation>Кодирование пакетов</translation>
     </message>
     <message>
         <source>Generate UUID</source>
@@ -8636,7 +8636,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Packet Encoding</source>
-        <translation>Packet Encoding</translation>
+        <translation>Кодирование пакетов</translation>
     </message>
 </context>
 <context>
@@ -8687,11 +8687,11 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Public Key</source>
-        <translation>Public Key</translation>
+        <translation>Публичный ключ</translation>
     </message>
     <message>
         <source>Private Key</source>
-        <translation>Private Key</translation>
+        <translation>Закрытый ключ</translation>
     </message>
     <message>
         <source>1420</source>
