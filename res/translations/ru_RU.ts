@@ -4498,7 +4498,7 @@ A domain listed with only one address family is answered NXDOMAIN for the other,
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable mixed-case SNI for profiles whose TLS Tricks setting is left on &amp;quot;Keep Default&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включать SNI в смешанном регистре (mixed-case) для профилей, у которых параметр «TLS Tricks» оставлен в значении &amp;quot;По умолчанию&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включать SNI в смешанном регистре (mixed-case) для профилей, у которых настройка «Изменение регистра SNI» оставлена в значении &amp;quot;По умолчанию&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Default Fingerprint</source>
