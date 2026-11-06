@@ -8547,7 +8547,7 @@ Improves hole-punching reliability. Requires IPv4.</source>
     </message>
     <message>
         <source>Client Random</source>
-        <translation>Client Random</translation>
+        <translation>Префикс случайных данных клиента</translation>
     </message>
     <message>
         <source>TLS ClientHello random prefix required by the server&apos;s client_random_prefix rule; not compatible with ECH or REALITY</source>
@@ -11317,7 +11317,7 @@ To fix this, share the hotspot from the throne-tun adapter instead of &quot;%1&q
     </message>
     <message>
         <source>Reality</source>
-        <translation>Reality</translation>
+        <translation>REALITY</translation>
     </message>
     <message>
         <source>Insecure TLS</source>
